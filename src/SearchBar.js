@@ -20,6 +20,7 @@ export default function SearchBar() {
         <span> Switch</span>
         <span> 星之卡比</span>
         <span>Hahahaha</span>
+      </div>
     </>
   );
 }

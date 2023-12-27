@@ -134,25 +134,33 @@ button.SearchButton {
   justify-content: space-around;
 }
 
+.ItemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6rem;
+}
+
 /* ProductCard */
 
 .ProductCard {
-  width: 390px;
-  height: 200px;
-  margin-bottom: 20rem;
+  flex: 0 1 calc(33.333% - 1rem);
+  margin-bottom: 2rem;
 }
 
-.PrductPrice {
+.ProductTitle {
+  max-width: 300px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.ProductPrice {
   font-weight: 800;
 }
 
 /* featuredItemsContainer */
 .featuredItemsContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.ItemsContainer {
   display: flex;
   justify-content: space-between;
 }
@@ -188,4 +196,8 @@ button.SearchButton {
 .CompanyName img {
   width: 13px;
   margin-top: 1.5rem;
+}
+
+.ProductImageShadow {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 自定义你的阴影样式 */
 }
