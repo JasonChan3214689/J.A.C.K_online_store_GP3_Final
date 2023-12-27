@@ -14,6 +14,7 @@ function App() {
     <>
       <div className="NavBar">
         <NavBar></NavBar>
+        123
       </div>
       <div className="Header">
         <div className="SearchBarCotainer">
