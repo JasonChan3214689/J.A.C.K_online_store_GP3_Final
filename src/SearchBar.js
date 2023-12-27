@@ -19,7 +19,7 @@ export default function SearchBar() {
         <span> PS5</span>
         <span> Switch</span>
         <span> 星之卡比</span>
-      </div>
+        <span>Hahahaha</span>
     </>
   );
 }
