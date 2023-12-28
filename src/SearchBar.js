@@ -1,10 +1,26 @@
-export default function SearchBar({ totalResults }) {
-  console.log(totalResults);
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+export default function SearchBar({ onSearch }) {
+  const [input, setInput] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    onSearch(input);
+    navigate("/search-results");
+  };
+
   return (
     <>
       <div className="search-container">
-        <input className="searchInput" type="text" placeholder="Search" />
-        <button className="SearchButton">
+        <input
+          className="searchInput"
+          type="text"
+          placeholder="Search"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button className="SearchButton" onClick={handleSearch}>
           <img style={{ width: "35px" }} src="./放大鏡.png" alt="放大镜" />
         </button>
       </div>
