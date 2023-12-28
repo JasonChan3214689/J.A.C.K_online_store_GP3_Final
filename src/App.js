@@ -69,6 +69,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
+<<<<<<< HEAD
           <Route
             path="/search-results"
             element={
@@ -78,6 +79,10 @@ function App() {
               />
             }
           ></Route>
+=======
+          <Route path="/search-results" element={<SearchResults />}></Route>
+          <Route path="/" element={<ProductDetails />}></Route>
+>>>>>>> ea7c5e3 (pdtdetails_v1)
         </Routes>
       </main>
       <Footer />
