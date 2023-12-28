@@ -31,6 +31,7 @@ const options = {
 
 function App() {
   const [totalResults, setTotalResults] = useState([]);
+  const [searchKeyword, setSearchKeyword] = useState("");
   // Fetch 全部資料
   useEffect(() => {
     const fetchAllData = async () => {
@@ -60,13 +61,23 @@ function App() {
     fetchAllData();
   }, []);
 
+  console.log(totalResults);
+
   return (
     <Router>
-      <Layout totalResults={totalResults} />
+      <Layout onSearch={setSearchKeyword} totalResults={totalResults} />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
-          <Route path="/search-results" element={<SearchResults />}></Route>
+          <Route
+            path="/search-results"
+            element={
+              <SearchResults
+                keyword={searchKeyword}
+                totalResults={totalResults}
+              />
+            }
+          ></Route>
         </Routes>
       </main>
       <Footer />
