@@ -6,7 +6,6 @@ export default function NavBar() {
         <li>Consoles</li>
         <li>Games</li>
         <li>Accessories</li>
-        <li>steak</li>
       </ul>
     </div>
   );

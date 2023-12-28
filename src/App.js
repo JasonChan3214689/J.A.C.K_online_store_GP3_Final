@@ -22,7 +22,7 @@ const NintendoUrl =
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "6e3ca1e040msh4b56a7c4ad59526p1b3dc3jsn62c6879d7e16",
+    "X-RapidAPI-Key": "0da8c1e193msh7432aab7ae8b188p1d4d39jsnbd2ee9b25f0b",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };
@@ -134,7 +134,7 @@ function App() {
           ))}
         </div>
         <Advertise>
-          <img src="./Banner_image/14.png" alt="15"></img>
+          <img src="./Banner_image/ad1.png" alt="15"></img>
         </Advertise>
         <span>Game</span>
         <div className="ItemsContainer">
@@ -150,7 +150,7 @@ function App() {
           ))}
         </div>
         <Advertise>
-          <img src="./Banner_image/15.png" alt="15"></img>
+          <img src="./Banner_image/ad2.png" alt="15"></img>
         </Advertise>
         <span>Gaming Accessories</span>
         <div className="ItemsContainer">
