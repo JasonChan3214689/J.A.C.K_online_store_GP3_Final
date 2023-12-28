@@ -5,7 +5,7 @@ import Filter from "./Filter";
 import Login from "./Login";
 import ShoppingCart from "./ShoppingCart";
 
-const Layout = () => {
+const Layout = ({ totalResults }) => {
   return (
     <>
       <div className="NavBar">
@@ -13,7 +13,7 @@ const Layout = () => {
       </div>
       <div className="Header">
         <div className="SearchBarCotainer">
-          <SearchBar />
+          <SearchBar totalResults={totalResults} />
         </div>
         <Filter />
         <Login />
