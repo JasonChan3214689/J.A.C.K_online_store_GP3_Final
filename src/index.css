@@ -115,15 +115,16 @@ button.SearchButton {
   width: 28px;
 }
 
-/* .TopBannerContainer {
+.TopBannerContainer {
   margin-top: 3rem;
   overflow: hidden;
 }
 
-.TopBannerContainer img {
+.topBannerPhoto img {
   width: 100%;
-  /* object-fit: cover; 
-} */
+  height: 600px;
+  object-fit: cover;
+}
 
 .BrandsContainer {
   margin-top: 2rem;
