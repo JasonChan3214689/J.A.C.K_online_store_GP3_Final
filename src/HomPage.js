@@ -26,7 +26,6 @@ function HomePage() {
   const [accProducts, accSetProducts] = useState([]);
   const [conProducts, conSetProducts] = useState([]);
   const [gameProducts, gameSetProducts] = useState([]);
-  const [totalResults, setTotalResults] = useState([]);
 
   //Fetch 周邊設備
   useEffect(() => {
@@ -90,37 +89,6 @@ function HomePage() {
     };
     fetchingFn();
   }, []);
-
-  //Fetch 所有結果
-  useEffect(() => {
-    const fetchAllData = async () => {
-      try {
-        const urls = [url, conUrl, NintendoUrl];
-
-        const responses = await Promise.all(urls.map((u) => fetch(u, options)));
-
-        const dataSets = await Promise.all(responses.map((res) => res.json()));
-
-        const totalResultArray = dataSets.flatMap((dataSet) => {
-          const result = dataSet.data.search.products;
-          return result.map((product) => ({
-            image: product.item.enrichment.images.primary_image_url,
-            name: product.item.product_description.title,
-            price: product.price.formatted_current_price,
-            priceType: product.price.formatted_current_price_type,
-          }));
-        });
-
-        setTotalResults(totalResultArray);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchAllData();
-  }, []);
-
-  console.log(totalResults);
 
   return (
     <>

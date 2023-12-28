@@ -1,4 +1,5 @@
-export default function SearchBar() {
+export default function SearchBar({ totalResults }) {
+  console.log(totalResults);
   return (
     <>
       <div className="search-container">
