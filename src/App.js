@@ -4,6 +4,7 @@ import Filter from "./Filter";
 import Login from "./Login";
 import ShoppingCart from "./ShoppingCart";
 
+import Layout from "./Layout";
 import HomePage from "./HomPage";
 import Footer from "./Footer";
 import SearchResults from "./searchResult/searchResult";
@@ -18,17 +19,7 @@ import {
 function App() {
   return (
     <Router>
-      <div className="NavBar">
-        <NavBar />
-      </div>
-      <div className="Header">
-        <div className="SearchBarCotainer">
-          <SearchBar />
-        </div>
-        <Filter />
-        <Login />
-        <ShoppingCart />
-      </div>
+      <Layout />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
