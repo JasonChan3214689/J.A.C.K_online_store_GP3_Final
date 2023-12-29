@@ -36,7 +36,6 @@ export default function SearchBar({ onSearch }) {
         <span> PS5</span>
         <span> Switch</span>
         <span> 星之卡比</span>
-        <span>Hahahaha</span>
       </div>
     </>
   );

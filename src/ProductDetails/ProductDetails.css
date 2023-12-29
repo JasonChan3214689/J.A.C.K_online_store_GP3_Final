@@ -1,0 +1,7 @@
+.PD_Top {
+  display: flex;
+}
+.altImage img {
+  width: 500px;
+  height: auto;
+}
