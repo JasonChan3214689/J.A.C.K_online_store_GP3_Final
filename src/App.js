@@ -2,6 +2,7 @@ import Layout from "./Layout";
 import HomePage from "./HomPage";
 import Footer from "./Footer";
 import SearchResults from "./searchResult/searchResult";
+import ProductDetails from "./ProductDetails/ProductDetails";
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,7 +25,7 @@ const NintendoUrl =
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "0da8c1e193msh7432aab7ae8b188p1d4d39jsnbd2ee9b25f0b",
+    "X-RapidAPI-Key": "e2b0514502msh93b0511af19445ep1fe412jsn5bcb00a782cc",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };
@@ -49,6 +50,7 @@ function App() {
             name: product.item.product_description.title,
             price: product.price.formatted_current_price,
             priceType: product.price.formatted_current_price_type,
+            tcin: product.item.tcin,
           }));
         });
 
@@ -78,6 +80,7 @@ function App() {
               />
             }
           ></Route>
+          <Route path={`/product/:tcin`} element={<ProductDetails />}></Route>
         </Routes>
       </main>
       <Footer />

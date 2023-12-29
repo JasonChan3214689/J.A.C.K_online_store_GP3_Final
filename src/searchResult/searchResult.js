@@ -5,7 +5,9 @@ function SearchResults({ keyword, totalResults }) {
   const results = totalResults.filter((product) =>
     product.name.toLowerCase().includes(keyword.toLowerCase())
   );
-
+  const handleCardClick = (tcin) => {
+    console.log("Product card clicked. tcin:", tcin);
+  };
   return (
     <>
       <span>Search result</span>
@@ -18,6 +20,8 @@ function SearchResults({ keyword, totalResults }) {
               name={resultProducts.name}
               price={resultProducts.price}
               priceType={resultProducts.priceType}
+              tcin={resultProducts.tcin}
+              onClick={handleCardClick}
             />
           ))
         ) : (
