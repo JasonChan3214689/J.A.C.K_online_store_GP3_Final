@@ -21,14 +21,14 @@ export default function SearchBar({ onSearch }) {
           onChange={(e) => setInput(e.target.value)}
         />
         <button className="SearchButton" onClick={handleSearch}>
-          <img style={{ width: "35px" }} src="./放大鏡.png" alt="放大镜" />
+          <img style={{ width: "35px" }} src="/放大鏡.png" alt="放大镜" />
         </button>
       </div>
 
       <div className="HotText">
         <span>HOT</span>
         <img
-          src="./hot-sale.png"
+          src="/hot-sale.png"
           alt="fire icon"
           style={{ width: "15px", height: "20px" }}
         />

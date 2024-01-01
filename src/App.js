@@ -3,13 +3,7 @@ import HomePage from "./HomPage";
 import Footer from "./Footer";
 import SearchResults from "./searchResult/searchResult";
 import ProductDetails from "./ProductDetails/ProductDetails";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -25,7 +19,7 @@ const NintendoUrl =
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "e2b0514502msh93b0511af19445ep1fe412jsn5bcb00a782cc",
+    "X-RapidAPI-Key": "c31c12f83bmshaa15045277e89acp1e97ffjsn2df9f8ba7cfa",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };
