@@ -1,7 +1,45 @@
 .PD_Top {
   display: flex;
+  margin: 2rem;
 }
 .altImage img {
   width: 500px;
   height: auto;
+}
+
+.custom-thumbnail {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery-container {
+  width: 100%;
+  min-width: 600px;
+  max-width: 600px;
+}
+
+.ProductDecWrapper {
+  margin-left: 4rem;
+}
+
+.PurchasedOnline {
+  margin-top: -1.5rem;
+}
+
+.QtyWrapper {
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.shoppingCartButton {
+  margin-left: 2rem;
+  background-color: #f82330;
+  width: 400px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
