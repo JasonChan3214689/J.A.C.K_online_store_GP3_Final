@@ -1,0 +1,16 @@
+.CreateAccInput {
+	margin: 50px 0px 50px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.SignInBtn {
+	cursor: pointer;
+}
+
+.ConfirmCreateBtn {
+	cursor: pointer;
+}

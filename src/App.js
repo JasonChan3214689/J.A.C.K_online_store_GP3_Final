@@ -86,7 +86,7 @@ function App() {
 					></Route>
 					<Route path="/login/signin" element={<SignIn />}></Route>
 					<Route
-						path="/login/create_account"
+						path="/login/create-account"
 						element={<CreateAcc />}
 					></Route>
 				</Routes>
