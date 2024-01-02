@@ -1,6 +1,11 @@
 /* Body */
+<<<<<<< HEAD
 .Shopping_wrapper {
   margin: 6rem;
+=======
+.container {
+  margin: 2rem;
+>>>>>>> c986737 (shopping cart_v2)
   display: grid;
   justify-content: center;
   grid-template-columns: auto;
