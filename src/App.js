@@ -5,6 +5,8 @@ import SearchResults from "./searchResult/searchResult";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import AboutUs from "./AboutUs";
 
+import SignIn from "./Login/SignIn";
+import CreateAcc from "./Login/CreateAcc";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
