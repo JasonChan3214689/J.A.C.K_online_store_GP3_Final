@@ -4,11 +4,13 @@ import "./ProductDetails.css";
 import ProductPhotoImg from "./ProductPhotoImg";
 import ProductDec from "./ProductDec";
 import Loading from "./Loading";
+import ItemVideo from "./ItemVideo";
+import ItemAccordion from "./ItemAccordion";
 
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "c31c12f83bmshaa15045277e89acp1e97ffjsn2df9f8ba7cfa",
+    "X-RapidAPI-Key": "0b0fd8d0demshb0ddb263b890fb3p1d0423jsn1bf4d46b69bd",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };
@@ -34,11 +36,13 @@ const ProductDetails = () => {
             desc: result.item.product_description.downstream_description,
             price: result.price.formatted_current_price,
             bulletDesc: result.item.product_description.bullet_descriptions,
-            softBulletDesc: result.item.product_description.bullets,
+            softBulletDesc:
+              result.item.product_description.soft_bullets.bullets,
             mainImage: result.item.enrichment.images.primary_image_url,
             altImage: result.item.enrichment.images.alternate_image_urls,
             labelImage: result.item.enrichment.images.content_labels,
-            //videos
+            video: result.item.enrichment.videos[0].video_files[0].video_url,
+            packaging: result.item.package_dimensions,
             pdtVendor: result.item.product_vendors[0].vendor_name,
             //pakage dimension
             //return policy
@@ -57,18 +61,34 @@ const ProductDetails = () => {
 
   return (
     <div className="ProductDetails">
-      <div className="PD_Top">
-        {isLoading && <Loading />}
-        {!isLoading && (
-          <>
+      {isLoading && <Loading />}
+      {!isLoading && (
+        <>
+          <div className="PD_Top">
             <ProductPhotoImg
               mainImg={details.mainImage}
               altimg={details.altImage}
             />
             <ProductDec price={details.price} title={details.title} />
-          </>
-        )}
-      </div>
+          </div>
+          <div className="PD_Bottom">
+            <div className="aboutThisItem">About This Item</div>
+
+            <div className="ItemVideo">
+              {details.video ? <ItemVideo video={details.video} /> : null}
+            </div>
+
+            <div className="Accordion">
+              <ItemAccordion
+                itemDesc={details.desc}
+                bulletDesc={details.bulletDesc}
+                softBulletDesc={details.softBulletDesc}
+                packaging={details.packaging}
+              />
+            </div>
+          </div>
+        </>
+      )}
       {/*       <div className="altImage">
         {details.altImage && details.altImage.length > 0
           ? details.altImage.map((imgItem, index) => (
@@ -76,7 +96,7 @@ const ProductDetails = () => {
             ))
           : console.log("no altImage available")}
       </div> */}
-      tcin: {tcin}
+      {console.log(tcin)}
     </div>
   );
 };
