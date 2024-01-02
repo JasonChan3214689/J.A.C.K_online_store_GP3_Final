@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import SearchBar from "./SearchBar";
-import Filter from "./Filter";
+
 import Login from "./Login";
 import ShoppingCart from "./ShoppingCart";
 
@@ -15,7 +15,7 @@ const Layout = ({ totalResults, onSearch }) => {
         <div className="SearchBarCotainer">
           <SearchBar totalResults={totalResults} onSearch={onSearch} />
         </div>
-        <Filter />
+
         <Login />
         <ShoppingCart />
       </div>
