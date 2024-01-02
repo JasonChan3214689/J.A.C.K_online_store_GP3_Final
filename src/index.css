@@ -202,3 +202,46 @@ button.SearchButton {
 .ProductImageShadow {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 自定义你的阴影样式 */
 }
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.submit:hover {
+  background-color: red !important;
+}
+.submit {
+  background-color: white !important;
+  border: 3px solid red !important;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* label {
+  width: 200px;
+} */
