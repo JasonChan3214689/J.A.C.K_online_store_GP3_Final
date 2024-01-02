@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import { useNavigate } from "react-router-dom";
 
 function LoginSidebarToggle() {
 	const [toggled, setToggled] = React.useState(false);
+	const navigate = useNavigate();
+
+	const handleOnClickCreateAcc = () => {
+		navigate("/login/create-account");
+	};
+	const handleOnClickSignIn = () => {
+		navigate("/login/signin");
+	};
+
 	return (
 		<div
 			style={{
@@ -19,9 +29,11 @@ function LoginSidebarToggle() {
 				breakPoint="always"
 			>
 				<Menu>
-					<MenuItem> Sign in</MenuItem>
-					<MenuItem> Create Account</MenuItem>
-					<MenuItem> Orders</MenuItem>
+					<MenuItem onClick={handleOnClickSignIn}> Sign in</MenuItem>
+					<MenuItem onClick={handleOnClickCreateAcc}>
+						Create Account
+					</MenuItem>
+					<MenuItem>Orders</MenuItem>
 				</Menu>
 			</Sidebar>
 			<main style={{ display: "flex", padding: 10 }}>
