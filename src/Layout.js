@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import SearchBar from "./SearchBar";
+import LoginSidebar from "./LoginSidebar";
 
 import ShoppingCart from "./ShoppingCart";
 import LoginSidebarToggle from "./LoginSidebar";

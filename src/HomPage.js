@@ -5,7 +5,7 @@ import Advertise from "./Advertise";
 
 import { useState, useEffect } from "react";
 
-/* const url =
+/*  const url =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Video%20Game%20Accessories&count=20&offset=0&faceted_value=5tal2&default_purchasability_filter=true&sort_by=relevance";
 
 const conUrl =
@@ -13,20 +13,18 @@ const conUrl =
 
 const NintendoUrl =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Nintendo%20Switch%20Games&count=20&offset=0&default_purchasability_filter=true&sort_by=relevance";
- */
-/* const options = {
+ 
+ const options = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
-}; */
 
+*/
 const consoleArray = require("./Array/consoleArray");
 const accArray = require("./Array/accArray");
 const gameArray = require("./Array/gameArray");
-
-console.log(accArray);
 
 function HomePage() {
   const [accProducts, accSetProducts] = useState([]);
@@ -87,8 +85,6 @@ function HomePage() {
     };
     fetchingFn();
   }, []); */
-
-  console.log(accProducts);
 
   //Fetch 遊戲光碟
   /*  useEffect(() => {
