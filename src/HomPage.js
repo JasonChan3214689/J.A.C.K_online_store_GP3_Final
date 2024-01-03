@@ -5,7 +5,7 @@ import Advertise from "./Advertise";
 
 import { useState, useEffect } from "react";
 
-const url =
+/*  const url =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Video%20Game%20Accessories&count=20&offset=0&faceted_value=5tal2&default_purchasability_filter=true&sort_by=relevance";
 
 const conUrl =
@@ -13,14 +13,18 @@ const conUrl =
 
 const NintendoUrl =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Nintendo%20Switch%20Games&count=20&offset=0&default_purchasability_filter=true&sort_by=relevance";
-
-const options = {
+ 
+ const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "c31c12f83bmshaa15045277e89acp1e97ffjsn2df9f8ba7cfa",
+    "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
-};
+
+*/
+const consoleArray = require("./Array/consoleArray");
+const accArray = require("./Array/accArray");
+const gameArray = require("./Array/gameArray");
 
 function HomePage() {
   const [accProducts, accSetProducts] = useState([]);
@@ -32,8 +36,14 @@ function HomePage() {
     setTcin(clickedTcin);
   };
 
-  //Fetch 周邊設備
   useEffect(() => {
+    conSetProducts(consoleArray.default);
+    accSetProducts(accArray.default);
+    gameSetProducts(gameArray.default);
+  }, []);
+
+  //Fetch 周邊設備
+  /*  useEffect(() => {
     const fetchingFn = async () => {
       try {
         const response = await fetch(url, options);
@@ -46,7 +56,6 @@ function HomePage() {
           priceType: product.price.formatted_current_price_type,
           tcin: product.item.tcin,
         }));
-        console.log(extractedProducts);
         accSetProducts(extractedProducts);
       } catch (error) {
         console.error(error);
@@ -54,9 +63,9 @@ function HomePage() {
     };
     fetchingFn();
   }, []);
-
+ */
   //Fetch 遊戲主機
-  useEffect(() => {
+  /*   useEffect(() => {
     const fetchingFn = async () => {
       try {
         const response = await fetch(conUrl, options);
@@ -75,10 +84,10 @@ function HomePage() {
       }
     };
     fetchingFn();
-  }, []);
+  }, []); */
 
   //Fetch 遊戲光碟
-  useEffect(() => {
+  /*  useEffect(() => {
     const fetchingFn = async () => {
       try {
         const response = await fetch(NintendoUrl, options);
@@ -98,6 +107,8 @@ function HomePage() {
     };
     fetchingFn();
   }, []);
+
+  console.log(gameProducts); */
 
   return (
     <>

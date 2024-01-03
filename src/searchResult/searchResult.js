@@ -6,6 +6,8 @@ function SearchResults({ keyword, totalResults }) {
   const results = totalResults.filter((product) =>
     product.name.toLowerCase().includes(keyword.toLowerCase())
   );
+
+  console.log(results);
   const handleCardClick = (tcin) => {
     console.log("Product card clicked. tcin:", tcin);
   };

@@ -11,6 +11,8 @@ import { useState } from "react";
 import Games from "./Pages/Games";
 import Accessories from "./Pages/Accessories";
 import Consoles from "./Pages/Consoles";
+import ShoppingCart from "./ShoppingCart";
+import ShoppingCartPage from "./ShoppingCart/ShoppingCartPage";
 
 const url =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Video%20Game%20Accessories&count=20&offset=0&faceted_value=5tal2&default_purchasability_filter=true&sort_by=relevance";
@@ -21,19 +23,28 @@ const conUrl =
 const NintendoUrl =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Nintendo%20Switch%20Games&count=20&offset=0&default_purchasability_filter=true&sort_by=relevance";
 
-const options = {
+/* const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "c31c12f83bmshaa15045277e89acp1e97ffjsn2df9f8ba7cfa",
+    "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
-};
+}; */
 
 function App() {
   const [totalResults, setTotalResults] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("");
+  const [shoppingCartItem, setshoppingCartItem] = useState([]);
   // Fetch 全部資料
+
+  const resultArray = require("./Array/resultArray");
+  console.log(resultArray);
+
   useEffect(() => {
+    setTotalResults(resultArray.default);
+  }, []);
+
+  /* useEffect(() => {
     const fetchAllData = async () => {
       try {
         const urls = [url, conUrl, NintendoUrl];
@@ -65,9 +76,28 @@ function App() {
     };
 
     fetchAllData();
+  }, []); */
+
+  useEffect(() => {
+    console.log("Loading items from local storage on mount");
+    const savedCartItems = localStorage.getItem("shoppingCartItems");
+    if (savedCartItems) {
+      console.log("Found saved items:", savedCartItems);
+      setshoppingCartItem(JSON.parse(savedCartItems));
+    } else {
+      console.log("No saved items found in local storage");
+    }
   }, []);
 
-  console.log(totalResults);
+  useEffect(() => {
+    console.log("Setting items to local storage", shoppingCartItem);
+    localStorage.setItem("shoppingCartItems", JSON.stringify(shoppingCartItem));
+  }, [shoppingCartItem]);
+
+  function handleAddShoppingCartButton(value) {
+    console.log("Updating shopping cart items: ", value);
+    setshoppingCartItem((item) => [...item, value]);
+  }
 
   return (
     <Router>
@@ -87,9 +117,21 @@ function App() {
               />
             }
           ></Route>
-          <Route path={`/product/:tcin`} element={<ProductDetails />}></Route>
+          <Route
+            path={`/product/:tcin`}
+            element={
+              <ProductDetails
+                shoppingCartItem={shoppingCartItem}
+                onShoppingCartitem={handleAddShoppingCartButton}
+              />
+            }
+          ></Route>
           <Route path="/login/signin" element={<SignIn />}></Route>
           <Route path="/login/create-account" element={<CreateAcc />}></Route>
+          <Route
+            path={`/shopping-cart`}
+            element={<ShoppingCartPage shoppingCartItem={shoppingCartItem} />}
+          ></Route>
         </Routes>
       </main>
       <Footer />
