@@ -10,11 +10,11 @@ import ItemAccordion from "./ItemAccordion";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "f4a32c8105msh6e6809ba17f74a9p150a68jsn46c52487869c",
+    "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };
-const ProductDetails = () => {
+const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
   const { tcin } = useParams();
   const PdtDetailsUrl = `https://target1.p.rapidapi.com/products/v3/get-details?tcin=${tcin}&store_id=911`;
   const [details, setDetails] = useState({});
@@ -69,7 +69,11 @@ const ProductDetails = () => {
               mainImg={details.mainImage}
               altimg={details.altImage}
             />
-            <ProductDec price={details.price} title={details.title} />
+            <ProductDec
+              price={details.price}
+              title={details.title}
+              onShoppingCartitem={onShoppingCartitem}
+            />
           </div>
           <div className="PD_Bottom">
             <div className="aboutThisItem">About This Item</div>

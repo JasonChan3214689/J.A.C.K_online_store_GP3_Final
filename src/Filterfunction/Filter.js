@@ -35,6 +35,10 @@ function Filter({ searchedResults }) {
     console.log("Product card clicked. tcin:", tcin);
   };
 
+  const handleOnClick = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+
   const filteredResults = searchedResults.filter(
     (product) =>
       (!selectedBrand || product.name.includes(selectedBrand)) &&
@@ -46,7 +50,7 @@ function Filter({ searchedResults }) {
   return (
     <div>
       <div className="FilterContainer">
-        <button onClick={() => setOpen((prevOpen) => !prevOpen)}>
+        <button onClick={handleOnClick}>
           <img src="./filter.png" alt="filter"></img>
           Filter
         </button>

@@ -109,6 +109,7 @@ button.SearchButton {
 .CartContainer {
   margin-top: 0.3rem;
   margin-left: 2rem;
+  cursor: pointer;
 }
 
 .CartContainer img {

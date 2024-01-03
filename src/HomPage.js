@@ -17,10 +17,16 @@ const NintendoUrl =
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "c31c12f83bmshaa15045277e89acp1e97ffjsn2df9f8ba7cfa",
+    "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };
+
+const consoleArray = require("./Array/consoleArray");
+const accArray = require("./Array/accArray");
+const gameArray = require("./Array/gameArray");
+
+console.log(accArray);
 
 function HomePage() {
   const [accProducts, accSetProducts] = useState([]);
@@ -32,8 +38,14 @@ function HomePage() {
     setTcin(clickedTcin);
   };
 
-  //Fetch 周邊設備
   useEffect(() => {
+    conSetProducts(consoleArray.default);
+    accSetProducts(accArray.default);
+    gameSetProducts(gameArray.default);
+  }, []);
+
+  //Fetch 周邊設備
+  /*  useEffect(() => {
     const fetchingFn = async () => {
       try {
         const response = await fetch(url, options);
@@ -46,7 +58,6 @@ function HomePage() {
           priceType: product.price.formatted_current_price_type,
           tcin: product.item.tcin,
         }));
-        console.log(extractedProducts);
         accSetProducts(extractedProducts);
       } catch (error) {
         console.error(error);
@@ -54,9 +65,9 @@ function HomePage() {
     };
     fetchingFn();
   }, []);
-
+ */
   //Fetch 遊戲主機
-  useEffect(() => {
+  /*   useEffect(() => {
     const fetchingFn = async () => {
       try {
         const response = await fetch(conUrl, options);
@@ -75,10 +86,12 @@ function HomePage() {
       }
     };
     fetchingFn();
-  }, []);
+  }, []); */
+
+  console.log(accProducts);
 
   //Fetch 遊戲光碟
-  useEffect(() => {
+  /*  useEffect(() => {
     const fetchingFn = async () => {
       try {
         const response = await fetch(NintendoUrl, options);
@@ -98,6 +111,8 @@ function HomePage() {
     };
     fetchingFn();
   }, []);
+
+  console.log(gameProducts); */
 
   return (
     <>
