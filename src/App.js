@@ -23,13 +23,13 @@ const conUrl =
 const NintendoUrl =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Nintendo%20Switch%20Games&count=20&offset=0&default_purchasability_filter=true&sort_by=relevance";
 
-const options = {
+/* const options = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
-};
+}; */
 
 function App() {
   const [totalResults, setTotalResults] = useState([]);
