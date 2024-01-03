@@ -6,6 +6,9 @@ import ProductDetails from "./ProductDetails/ProductDetails";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
+import Games from "./Pages/Games";
+import Accessories from "./Pages/Accessories";
+import Consoles from "./Pages/Consoles";
 
 const url =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Video%20Game%20Accessories&count=20&offset=0&faceted_value=5tal2&default_purchasability_filter=true&sort_by=relevance";
@@ -19,7 +22,7 @@ const NintendoUrl =
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "f4a32c8105msh6e6809ba17f74a9p150a68jsn46c52487869c",
+    "X-RapidAPI-Key": "4f61b3c728mshcbd61533852fff4p18399fjsne28d091f36ed",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };
@@ -39,13 +42,18 @@ function App() {
 
         const totalResultArray = dataSets.flatMap((dataSet) => {
           const result = dataSet.data.search.products;
-          return result.map((product) => ({
-            image: product.item.enrichment.images.primary_image_url,
-            name: product.item.product_description.title,
-            price: product.price.formatted_current_price,
-            priceType: product.price.formatted_current_price_type,
-            tcin: product.item.tcin,
-          }));
+          return result.map((product) => {
+            const priceString = product.price.formatted_current_price;
+            const numericPriceString = priceString.replace(/[^0-9.]/g, "");
+            const price = parseFloat(numericPriceString);
+            return {
+              image: product.item.enrichment.images.primary_image_url,
+              name: product.item.product_description.title,
+              price: price,
+              priceType: product.price.formatted_current_price_type,
+              productTypes: product.item.product_classification.item_type.name,
+            };
+          });
         });
 
         setTotalResults(totalResultArray);
@@ -57,7 +65,7 @@ function App() {
     fetchAllData();
   }, []);
 
-  // console.log(totalResults);
+  console.log(totalResults);
 
   return (
     <Router>
@@ -65,6 +73,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
+          <Route path="/Pages/Consoles" element={<Consoles />}></Route>
+          <Route path="/Pages/Games" element={<Games />}></Route>
+          <Route path="/Pages/Accessories" element={<Accessories />}></Route>
           <Route
             path="/search-results"
             element={
