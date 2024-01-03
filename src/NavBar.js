@@ -1,11 +1,21 @@
+import { Link } from "react-router-dom";
+
 export default function NavBar() {
   return (
     <div>
       <ul>
-        <li>Main Page</li>
-        <li>Consoles</li>
-        <li>Games</li>
-        <li>Accessories</li>
+        <li>
+          <Link to="/">Main Page</Link>
+        </li>
+        <li>
+          <Link to="./Pages/Consoles">Consoles</Link>
+        </li>
+        <li>
+          <Link to="./Pages/Games">Games</Link>
+        </li>
+        <li>
+          <Link to="./Pages/Accessories">Accessories</Link>
+        </li>
       </ul>
     </div>
   );
