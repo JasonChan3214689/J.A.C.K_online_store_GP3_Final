@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "../ProductCard";
+import Filter from "../Filterfunction/Filter";
 
 function SearchResults({ keyword, totalResults }) {
   const results = totalResults.filter((product) =>
@@ -11,6 +12,7 @@ function SearchResults({ keyword, totalResults }) {
   return (
     <>
       <span>Search result</span>
+      <Filter searchedResults={results} />
       <div className="ItemsContainer">
         {results.length > 0 ? (
           results.map((resultProducts, index) => (
