@@ -10,11 +10,7 @@ import ItemAccordion from "./ItemAccordion";
 const options = {
   method: "GET",
   headers: {
-<<<<<<< HEAD
     "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
-=======
-    "X-RapidAPI-Key": "0b0fd8d0demshb0ddb263b890fb3p1d0423jsn1bf4d46b69bd",
->>>>>>> 957d55b (aboutUs)
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };
@@ -34,7 +30,7 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
           const dataSet = await response.json();
           const result = dataSet.data.product;
           console.log(result);
-          const extractedProducts = {
+          const preExtractedProducts = {
             tcin: result.tcin,
             title: result.item.product_description.title,
             desc: result.item.product_description.downstream_description,
@@ -45,13 +41,23 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
             mainImage: result.item.enrichment.images.primary_image_url,
             altImage: result.item.enrichment.images.alternate_image_urls,
             labelImage: result.item.enrichment.images.content_labels,
-            video: result.item.enrichment.videos[0].video_files[0].video_url,
+            video:
+              result.item.enrichment.videos?.[0]?.video_files?.[0]?.video_url,
             packaging: result.item.package_dimensions,
-            pdtVendor: result.item.product_vendors[0].vendor_name,
+            pdtVendor: result.item.product_vendors?.[0]?.vendor_name,
             //pakage dimension
             //return policy
             //other prices
           };
+          const extractedProducts = Object.entries(preExtractedProducts).reduce(
+            (filtered, [key, value]) => {
+              if (value) {
+                filtered[key] = value;
+              }
+              return filtered;
+            },
+            {}
+          );
 
           setDetails(extractedProducts);
           setIsLoading(false);
@@ -61,7 +67,7 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
       }
     };
     fetchingFn();
-  }, [tcin]);
+  }, []);
 
   return (
     <div className="ProductDetails">
@@ -82,16 +88,20 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
           <div className="PD_Bottom">
             <div className="aboutThisItem">About This Item</div>
 
-            <div className="ItemVideo">
-              {details.video ? <ItemVideo video={details.video} /> : null}
-            </div>
+            {details.video && (
+              <div className="ItemVideo">
+                <ItemVideo video={details.video} />
+              </div>
+            )}
 
             <div className="Accordion">
               <ItemAccordion
-                itemDesc={details.desc}
-                bulletDesc={details.bulletDesc}
-                softBulletDesc={details.softBulletDesc}
-                packaging={details.packaging}
+                itemDesc={details.desc && details.desc}
+                bulletDesc={details.bulletDesc && details.bulletDesc}
+                softBulletDesc={
+                  details.softBulletDesc && details.softBulletDesc
+                }
+                packaging={details.packaging ? details.packaging : null}
               />
             </div>
           </div>
