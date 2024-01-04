@@ -3,7 +3,8 @@ import Brandfilter from "./Brandfilter";
 import Typefilter from "./Typefilter";
 import Pricefilter from "./Pricefilter";
 import Slider from "./Slider";
-import ProductCard from "../ProductCard";
+//import ProductCard from "../ProductCard";
+import Sort from "../Sortfunction/Sort";
 
 function Filter({ searchedResults }) {
   const [selectedBrand, setSelectedBrand] = useState(null);
@@ -26,6 +27,13 @@ function Filter({ searchedResults }) {
   const handlePriceChange = (min, max) => {
     setSelectedMinPrice(min);
     setSelectedMaxPrice(max);
+  };
+
+  const handleClearFilters = () => {
+    setSelectedBrand(null);
+    setSelectedType(null);
+    setSelectedMinPrice(0);
+    setSelectedMaxPrice(500);
   };
 
   console.log(selectedMinPrice);
@@ -54,16 +62,19 @@ function Filter({ searchedResults }) {
           <img src="./filter.png" alt="filter"></img>
           Filter
         </button>
+
         {open && (
           <div className="container">
             <Brandfilter handleChange={handleBrandChange} />
             <Typefilter handleChange={handleTypeChange} />
             <Pricefilter handleChange={handlePriceChange} />
             <Slider handlePriceChange={handlePriceChange} />
+            <button onClick={handleClearFilters}>Clear Filters</button>
           </div>
         )}
       </div>
-      {filteredResults.map((product, index) => (
+      <Sort searchResultProducts={filteredResults} />
+      {/* {filteredResults.map((product, index) => (
         <ProductCard
           key={index}
           image={product.image}
@@ -73,7 +84,7 @@ function Filter({ searchedResults }) {
           tcin={product.tcin}
           onClick={handleCardClick}
         />
-      ))}
+      ))} */}
     </div>
   );
 }

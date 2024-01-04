@@ -2,6 +2,7 @@ import TopBanner from "./TopBanner";
 import Brands from "./Brands";
 import ProductCard from "./ProductCard";
 import Advertise from "./Advertise";
+import { Link } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
@@ -136,9 +137,11 @@ function HomePage() {
             </div>
           ))}
         </div>
-        <Advertise>
-          <img src="./Banner_image/ad1.png" alt="15"></img>
-        </Advertise>
+        <Link to="./AdFunction/Advertisement">
+          <Advertise>
+            <img src="./Banner_image/ad1.png" alt="15"></img>
+          </Advertise>
+        </Link>
         <span>Game</span>
         <div className="ItemsContainer">
           {gameProducts.map((accProducts, index) => (
@@ -154,9 +157,11 @@ function HomePage() {
             </div>
           ))}
         </div>
-        <Advertise>
-          <img src="./Banner_image/ad2.png" alt="15"></img>
-        </Advertise>
+        <Link to="./AdFunction/Ad2">
+          <Advertise>
+            <img src="./Banner_image/ad2.png" alt="15"></img>
+          </Advertise>
+        </Link>
         <span>Gaming Accessories</span>
         <div className="ItemsContainer">
           {accProducts.map((accProducts, index) => (

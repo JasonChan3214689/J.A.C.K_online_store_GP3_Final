@@ -13,6 +13,9 @@ import Accessories from "./Pages/Accessories";
 import Consoles from "./Pages/Consoles";
 import ShoppingCart from "./ShoppingCart";
 import ShoppingCartPage from "./ShoppingCart/ShoppingCartPage";
+import Advertisement from "./AdFunction/Advertisement";
+import Ad2 from "./AdFunction/Ad2";
+import AboutUs from "./AboutUs";
 
 const url =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Video%20Game%20Accessories&count=20&offset=0&faceted_value=5tal2&default_purchasability_filter=true&sort_by=relevance";
@@ -100,42 +103,51 @@ function App() {
   }
 
   return (
-    <Router>
-      <Layout onSearch={setSearchKeyword} totalResults={totalResults} />
-      <main>
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/Pages/Consoles" element={<Consoles />}></Route>
-          <Route path="/Pages/Games" element={<Games />}></Route>
-          <Route path="/Pages/Accessories" element={<Accessories />}></Route>
-          <Route
-            path="/search-results"
-            element={
-              <SearchResults
-                keyword={searchKeyword}
-                totalResults={totalResults}
-              />
-            }
-          ></Route>
-          <Route
-            path={`/product/:tcin`}
-            element={
-              <ProductDetails
-                shoppingCartItem={shoppingCartItem}
-                onShoppingCartitem={handleAddShoppingCartButton}
-              />
-            }
-          ></Route>
-          <Route path="/login/signin" element={<SignIn />}></Route>
-          <Route path="/login/create-account" element={<CreateAcc />}></Route>
-          <Route
-            path={`/shopping-cart`}
-            element={<ShoppingCartPage shoppingCartItem={shoppingCartItem} />}
-          ></Route>
-        </Routes>
-      </main>
-      <Footer />
-    </Router>
+    <>
+      <Router>
+        <Layout onSearch={setSearchKeyword} totalResults={totalResults} />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/Pages/Consoles" element={<Consoles />}></Route>
+            <Route path="/Pages/Games" element={<Games />}></Route>
+            <Route path="/Pages/Accessories" element={<Accessories />}></Route>
+            <Route
+              path="/search-results"
+              element={
+                <SearchResults
+                  keyword={searchKeyword}
+                  totalResults={totalResults}
+                />
+              }
+            ></Route>
+            <Route
+              path={`/product/:tcin`}
+              element={
+                <ProductDetails
+                  shoppingCartItem={shoppingCartItem}
+                  onShoppingCartitem={handleAddShoppingCartButton}
+                />
+              }
+            ></Route>
+            <Route
+              path="/AdFunction/Advertisement"
+              element={<Advertisement saleresult={totalResults} />}
+            ></Route>
+            <Route path="/AdFunction/Ad2" element={<Ad2 />}></Route>
+            <Route path={`/product/:tcin`} element={<ProductDetails />}></Route>
+            <Route path="/login/signin" element={<SignIn />}></Route>
+            <Route path="/login/create-account" element={<CreateAcc />}></Route>
+            <Route
+              path={`/shopping-cart`}
+              element={<ShoppingCartPage shoppingCartItem={shoppingCartItem} />}
+            ></Route>
+            <Route path="/AboutUs" element={<AboutUs />}></Route>
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </>
   );
 }
 

@@ -4,6 +4,7 @@ export default function ProductCard({
   name,
   price,
   priceType,
+  rating,
   tcin,
   onClick,
 }) {
@@ -22,6 +23,7 @@ export default function ProductCard({
 
       <div className="ProductPrice">
         <span>{price}</span>
+        <span>{rating}</span>
       </div>
     </div>
   );

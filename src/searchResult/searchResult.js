@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "../ProductCard";
+//import ProductCard from "../ProductCard";
 import Filter from "../Filterfunction/Filter";
 
 function SearchResults({ keyword, totalResults }) {
@@ -14,8 +14,10 @@ function SearchResults({ keyword, totalResults }) {
   return (
     <>
       <span>Search result</span>
-      <Filter searchedResults={results} />
-      <div className="ItemsContainer">
+      <div>
+        <Filter searchedResults={results} />
+      </div>
+      {/* <div className="ItemsContainer">
         {results.length > 0 ? (
           results.map((resultProducts, index) => (
             <ProductCard
@@ -31,7 +33,7 @@ function SearchResults({ keyword, totalResults }) {
         ) : (
           <div>No products found.</div>
         )}
-      </div>
+      </div> */}
     </>
   );
 }

@@ -5,7 +5,7 @@ export default function NavBar() {
     <div>
       <ul>
         <li>
-          <Link to="/">Main Page</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="./Pages/Consoles">Consoles</Link>
