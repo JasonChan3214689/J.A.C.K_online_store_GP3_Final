@@ -13,7 +13,7 @@ const NintendoUrl =
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "4f61b3c728mshcbd61533852fff4p18399fjsne28d091f36ed",
+    "X-RapidAPI-Key": "4c7870db60msh43b63a399145faap148da3jsn45c0572ebd16",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };
