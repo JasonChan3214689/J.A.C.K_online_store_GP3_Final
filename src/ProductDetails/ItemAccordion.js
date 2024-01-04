@@ -37,7 +37,7 @@ const ItemAccordion = ({ itemDesc, bulletDesc, softBulletDesc, packaging }) => {
           .join("<br>")
           .replace(new RegExp(replacePhrase, "g"), replacement)
       : "";
-
+    console.log(bulletDesc);
     setBulletListString(bulletString);
     setSoftBulletListString(softBulletString);
     setPackagingString(packagingString);
@@ -47,18 +47,22 @@ const ItemAccordion = ({ itemDesc, bulletDesc, softBulletDesc, packaging }) => {
     <>
       {console.log(packagingString)}
       {console.log(softBulletDesc)}
-      <Collapsible trigger="Details">
-        <Interweave content={itemDesc} />
-      </Collapsible>
+      {itemDesc ? (
+        <Collapsible trigger="Details">
+          <Interweave content={itemDesc} />
+        </Collapsible>
+      ) : null}
       <Collapsible trigger="Product Specifications">
         <Interweave content={bulletListString} />
         <br />
         <br />
         <Interweave content={softBulletListString} />
       </Collapsible>
-      <Collapsible trigger="Packaging">
-        <Interweave content={packagingString} />
-      </Collapsible>
+      {packaging ? (
+        <Collapsible trigger="Packaging">
+          <Interweave content={packagingString} />
+        </Collapsible>
+      ) : null}
     </>
   );
 };

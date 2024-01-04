@@ -28,6 +28,7 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
           setIsLoading(true);
           const response = await fetch(PdtDetailsUrl, options);
           const dataSet = await response.json();
+          console.log(dataSet);
           const result = dataSet.data.product;
           console.log(result);
           const preExtractedProducts = {
@@ -37,7 +38,7 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
             price: result.price.formatted_current_price,
             bulletDesc: result.item.product_description.bullet_descriptions,
             softBulletDesc:
-              result.item.product_description.soft_bullets.bullets,
+              result.item.product_description?.soft_bullets?.bullets,
             mainImage: result.item.enrichment.images.primary_image_url,
             altImage: result.item.enrichment.images.alternate_image_urls,
             labelImage: result.item.enrichment.images.content_labels,
@@ -96,11 +97,9 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
 
             <div className="Accordion">
               <ItemAccordion
-                itemDesc={details.desc && details.desc}
-                bulletDesc={details.bulletDesc && details.bulletDesc}
-                softBulletDesc={
-                  details.softBulletDesc && details.softBulletDesc
-                }
+                itemDesc={details.desc || null}
+                bulletDesc={details.bulletDesc || null}
+                softBulletDesc={details.softBulletDesc || null}
                 packaging={details.packaging ? details.packaging : null}
               />
             </div>

@@ -26,13 +26,13 @@ const conUrl =
 const NintendoUrl =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Nintendo%20Switch%20Games&count=20&offset=0&default_purchasability_filter=true&sort_by=relevance";
 
-/* const options = {
+/*const options = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
-}; */
+};*/
 
 function App() {
   const [totalResults, setTotalResults] = useState([]);
@@ -47,7 +47,7 @@ function App() {
     setTotalResults(resultArray.default);
   }, []);
 
-  /* useEffect(() => {
+  /*useEffect(() => {
     const fetchAllData = async () => {
       try {
         const urls = [url, conUrl, NintendoUrl];
@@ -58,6 +58,7 @@ function App() {
 
         const totalResultArray = dataSets.flatMap((dataSet) => {
           const result = dataSet.data.search.products;
+
           return result.map((product) => {
             const priceString = product.price.formatted_current_price;
             const numericPriceString = priceString.replace(/[^0-9.]/g, "");
@@ -68,18 +69,20 @@ function App() {
               price: price,
               priceType: product.price.formatted_current_price_type,
               productTypes: product.item.product_classification.item_type.name,
+              tcin: product.item.tcin,
             };
           });
         });
 
         setTotalResults(totalResultArray);
+        console.log(totalResultArray);
       } catch (error) {
         console.error(error);
       }
     };
 
     fetchAllData();
-  }, []); */
+  }, []);*/
 
   useEffect(() => {
     console.log("Loading items from local storage on mount");
