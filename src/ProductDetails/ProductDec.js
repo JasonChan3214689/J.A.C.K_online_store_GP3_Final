@@ -6,6 +6,7 @@ const ProductDec = ({ title, price, shoppingCartItem, onShoppingCartitem }) => {
 
   function handleShoppingCartButton() {
     const id = crypto.randomUUID();
+    alert("Add to Cart successful~");
     const newProduct = {
       id,
       title,

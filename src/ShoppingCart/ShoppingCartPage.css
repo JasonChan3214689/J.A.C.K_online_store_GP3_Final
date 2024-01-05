@@ -134,7 +134,6 @@ hr {
 .checkout .footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px 10px 10px 20px;
   background-color: #f82330;
 }
@@ -144,6 +143,15 @@ hr {
   font-size: 22px;
   color: #ffffff;
   font-weight: 900;
+  flex: 0080%;
+}
+
+.btnWrapper {
+  display: flex;
+  flex: 0020%;
+}
+.btnWrapper button {
+  margin-left: 2rem;
 }
 
 .checkout .checkout-btn {
@@ -151,6 +159,7 @@ hr {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   width: 150px;
   height: 36px;
   background: #ffffff;
@@ -162,6 +171,7 @@ hr {
   font-size: 13px;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  cursor: pointer;
 }
 
 .ProductWrapper {

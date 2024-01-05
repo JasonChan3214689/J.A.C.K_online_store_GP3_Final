@@ -10,7 +10,7 @@ import ItemAccordion from "./ItemAccordion";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
+    "X-RapidAPI-Key": "446a6d1012msha37eac4c1ae6963p1fefa7jsn7b2f1aed8e54",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };

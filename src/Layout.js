@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 import LoginSidebarToggle from "./LoginSidebar";
 import ShoppingCart from "./ShoppingCart";
 
-const Layout = ({ totalResults, onSearch }) => {
+const Layout = ({ totalResults, onSearch, shoppingCartItem }) => {
   return (
     <>
       <div className="NavBar">
@@ -18,7 +18,7 @@ const Layout = ({ totalResults, onSearch }) => {
         </div>
 
         <LoginSidebarToggle />
-        <ShoppingCart />
+        <ShoppingCart shoppingCartItem={shoppingCartItem} />
       </div>
     </>
   );
