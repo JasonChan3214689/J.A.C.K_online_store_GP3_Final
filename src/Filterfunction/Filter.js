@@ -75,6 +75,11 @@ function Filter({ searchedResults }) {
       </div>
       <Sort searchResultProducts={filteredResults} />
       {/* {filteredResults.map((product, index) => (
+<<<<<<< HEAD
+      <Sort searchResultProducts={filteredResults} />
+      {/* {filteredResults.map((product, index) => (
+=======
+>>>>>>> d4479d542ba1936b87c1a4e25c40b99efa92583f
         <ProductCard
           key={index}
           image={product.image}

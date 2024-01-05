@@ -6,7 +6,7 @@ import ProductDetails from "./ProductDetails/ProductDetails";
 import SignIn from "./Login/SignIn";
 import CreateAcc from "./Login/CreateAcc";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import Games from "./Pages/Games";
 import Accessories from "./Pages/Accessories";

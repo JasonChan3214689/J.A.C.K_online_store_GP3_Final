@@ -8,9 +8,9 @@ function SearchResults({ keyword, totalResults }) {
   );
 
   console.log(results);
-  const handleCardClick = (tcin) => {
-    console.log("Product card clicked. tcin:", tcin);
-  };
+  // const handleCardClick = (tcin) => {
+  //   console.log("Product card clicked. tcin:", tcin);
+  // };
   return (
     <>
       <span>Search result</span>

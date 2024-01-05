@@ -1,6 +1,7 @@
 import React from "react";
 import "./ShoppingCartPage.css";
 import { useNavigate } from "react-router-dom";
+import TotalvalueofItem from "./TotalvalueofItem";
 
 const ShoppingCartPage = ({
   shoppingCartItem,
@@ -54,6 +55,7 @@ const ShoppingCartPage = ({
 
       <div className="card checkout">
         <div className="footer">
+          <TotalvalueofItem shoppingCartItem={shoppingCartItem} />
           <label className="price">${grandTotal.toFixed(2)}</label>
           {shoppingCartItem.length === 0 ? (
             ""

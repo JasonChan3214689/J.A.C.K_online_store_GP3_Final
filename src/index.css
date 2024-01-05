@@ -255,3 +255,36 @@ button.SearchButton {
 /* label {
   width: 200px;
 } */
+
+.ProductImage {
+  position: relative;
+}
+
+.crown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px;
+}
+
+.CartContainer {
+  position: relative;
+}
+
+.numberOfAmount {
+  position: absolute;
+  background-color: #f82330;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: #f82330;
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+  font-style: normal;
+  text-decoration: none;
+}

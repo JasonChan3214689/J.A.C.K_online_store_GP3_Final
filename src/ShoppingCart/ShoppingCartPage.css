@@ -154,6 +154,13 @@ hr {
   margin-left: 2rem;
 }
 
+.quantity {
+  position: relative;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 900;
+}
+
 .checkout .checkout-btn {
   display: flex;
   flex-direction: row;

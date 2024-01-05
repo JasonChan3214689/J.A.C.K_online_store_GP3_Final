@@ -1,6 +1,7 @@
 import TopBanner from "./TopBanner";
 import Brands from "./Brands";
 import ProductCard from "./ProductCard";
+import ProductCard2 from "./ProductCard2";
 import Advertise from "./Advertise";
 import { Link } from "react-router-dom";
 
@@ -118,9 +119,28 @@ function HomePage() {
         <Brands />
         <span>Featured Items</span>
         <div className="featuredItemsContainer">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          <ProductCard2
+            image="https://target.scene7.com/is/image/Target/GUEST_8e7a3c22-fb56-408e-91ba-cf64051d0d01"
+            name="PlayStation 5 Console Marvel's Spider-Man 2 Bundle"
+            price="499.99"
+            tcin="89981366"
+            onClick={handleCardClick}
+          />
+
+          <ProductCard2
+            image="https://target.scene7.com/is/image/Target/GUEST_6703aac2-39b6-49b3-81b2-f8a2b9961953"
+            name="Minecraft Legends Deluxe Edition - Nintendo Switch"
+            price="49.99"
+            tcin="88472033"
+            onClick={handleCardClick}
+          />
+          <ProductCard2
+            image="https://target.scene7.com/is/image/Target/GUEST_95fd7464-203b-4779-aad9-624da4149fa0"
+            name="The Legend of Zelda: Tears of the Kingdom - Nintendo Switch"
+            price="69.9"
+            tcin="88492050"
+            onClick={handleCardClick}
+          />
         </div>
         <span>Console</span>
         <div className="ItemsContainer">
@@ -157,11 +177,15 @@ function HomePage() {
             </div>
           ))}
         </div>
-        <Link to="./AdFunction/Ad2">
-          <Advertise>
-            <img src="./Banner_image/ad2.png" alt="15"></img>
-          </Advertise>
-        </Link>
+
+        <Advertise>
+          <ProductCard
+            image="./Banner_image/ad2.png"
+            tcin="89430347"
+            onClick={handleCardClick}
+          ></ProductCard>
+        </Advertise>
+
         <span>Gaming Accessories</span>
         <div className="ItemsContainer">
           {accProducts.map((accProducts, index) => (

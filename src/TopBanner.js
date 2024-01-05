@@ -56,7 +56,6 @@ export default function TopBanner({ deviceType }) {
           <img src="/TopBanner/hogwart.jpg" alt="hogwarts" />
         </div>
       </Carousel>
-      ;
     </div>
   );
 }

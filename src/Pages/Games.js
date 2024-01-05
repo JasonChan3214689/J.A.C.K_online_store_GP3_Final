@@ -1,19 +1,14 @@
 import ProductCard from "../ProductCard";
 import { useState, useEffect } from "react";
 
-const NintendoUrl =
-  "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Nintendo%20Switch%20Games&count=20&offset=0&default_purchasability_filter=true&sort_by=relevance";
-
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
-    "X-RapidAPI-Host": "target1.p.rapidapi.com",
-  },
-};
+import gameArray from "../Array/gameArray";
 
 function Games() {
-  const [gameProducts, gameSetProducts] = useState([]);
+  const [gameProducts, setGameProducts] = useState([]);
+
+  useEffect(() => {
+    setGameProducts(gameArray);
+  }, []);
 
   const [tcin, setTcin] = useState("");
   const handleCardClick = (clickedTcin) => {
@@ -21,26 +16,6 @@ function Games() {
     setTcin(clickedTcin);
   };
 
-  useEffect(() => {
-    const fetchingFn = async () => {
-      try {
-        const response = await fetch(NintendoUrl, options);
-        const dataSet = await response.json();
-        const result = dataSet.data.search.products;
-        const extractedProducts = result.map((product) => ({
-          image: product.item.enrichment.images.primary_image_url,
-          name: product.item.product_description.title,
-          price: product.price.formatted_current_price,
-          priceType: product.price.formatted_current_price_type,
-          tcin: product.item.tcin,
-        }));
-        gameSetProducts(extractedProducts);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchingFn();
-  }, []);
   return (
     <>
       <span>Game</span>
