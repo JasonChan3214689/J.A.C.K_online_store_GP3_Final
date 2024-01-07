@@ -16,7 +16,6 @@ const Layout = ({ totalResults, onSearch, shoppingCartItem }) => {
         <div className="SearchBarCotainer">
           <SearchBar totalResults={totalResults} onSearch={onSearch} />
         </div>
-
         <LoginSidebarToggle />
         <ShoppingCart shoppingCartItem={shoppingCartItem} />
       </div>

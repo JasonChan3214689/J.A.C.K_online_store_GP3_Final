@@ -173,7 +173,9 @@ button.SearchButton {
 /* featuredItemsContainer */
 .featuredItemsContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 /* advertiseContainer */
@@ -287,4 +289,151 @@ a {
   color: #ffffff;
   font-style: normal;
   text-decoration: none;
+}
+
+.categoryContainer {
+  margin: 4rem;
+  text-align: center;
+}
+
+.categoryContainer img {
+  width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .ItemsContainer {
+    gap: 4rem;
+  }
+
+  .searchInput,
+  .search-container {
+    width: 100%;
+    margin: 0 1rem;
+  }
+
+  .ProductCard {
+    flex: 0 1 calc(50% - 1rem);
+  }
+
+  .Header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ItemsContainer {
+    gap: 2rem;
+  }
+
+  .searchInput,
+  .search-container {
+    width: 90%;
+    margin: 0 1rem;
+  }
+
+  .ProductCard {
+    flex: 0 1 100%;
+  }
+
+  .NavBar ul {
+    flex-direction: column;
+  }
+
+  .NavBar li {
+    margin: 0.2rem;
+  }
+
+  .LoginContainer,
+  .CartContainer,
+  .FilterCotainer {
+    margin-left: 1rem;
+  }
+
+  .TopBannerContainer {
+    margin-top: 1rem;
+  }
+
+  .topBannerPhoto img {
+    height: auto;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+  }
+
+  .SocialMediaIcon,
+  .CompanyName {
+    flex: 1;
+    text-align: center;
+  }
+
+  .SocialMediaIcon img,
+  .CompanyName img {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .SearchButton,
+  .FilterCotainer button,
+  .LoginContainer,
+  .CartContainer {
+    height: 25px;
+  }
+
+  .HotText,
+  .ProductTitle,
+  .ProductPrice {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .CartContainer {
+    position: fixed;
+    right: 10px;
+    bottom: 45px;
+    margin-left: 0;
+    margin-top: 0;
+    z-index: 100;
+  }
+
+  .BrandsContainer {
+    display: none;
+  }
+
+  .CartContainer img {
+    width: 55px;
+  }
+
+  .numberOfAmount {
+    top: -10px;
+    right: -10px;
+  }
+}
+
+.burger-menu {
+  cursor: pointer;
+}
+
+.desktop-menu {
+  display: block;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
 }

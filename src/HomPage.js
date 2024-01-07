@@ -3,6 +3,7 @@ import Brands from "./Brands";
 import ProductCard from "./ProductCard";
 import ProductCard2 from "./ProductCard2";
 import Advertise from "./Advertise";
+import CategoryTitle from "./CategoryTitle";
 import { Link } from "react-router-dom";
 
 import { useState, useEffect } from "react";
@@ -117,7 +118,13 @@ function HomePage() {
       <main>
         <TopBanner />
         <Brands />
-        <span>Featured Items</span>
+        <CategoryTitle>
+          <img
+            src="/CategoryTitle/FeaturedItems.png"
+            alt="FeaturedItems"
+            style={{ width: "350px" }}
+          />
+        </CategoryTitle>
         <div className="featuredItemsContainer">
           <ProductCard2
             image="https://target.scene7.com/is/image/Target/GUEST_8e7a3c22-fb56-408e-91ba-cf64051d0d01"
@@ -142,7 +149,13 @@ function HomePage() {
             onClick={handleCardClick}
           />
         </div>
-        <span>Console</span>
+        <CategoryTitle>
+          <img
+            src="/CategoryTitle/Console.png"
+            alt="Console"
+            style={{ width: "225px" }}
+          />
+        </CategoryTitle>
         <div className="ItemsContainer">
           {conProducts.map((accProducts, index) => (
             <div key={index}>
@@ -162,7 +175,13 @@ function HomePage() {
             <img src="./Banner_image/ad1.png" alt="15"></img>
           </Advertise>
         </Link>
-        <span>Game</span>
+        <CategoryTitle>
+          <img
+            src="/CategoryTitle/Game.png"
+            alt="Game"
+            style={{ width: "200px" }}
+          />
+        </CategoryTitle>
         <div className="ItemsContainer">
           {gameProducts.map((accProducts, index) => (
             <div key={index}>
@@ -186,7 +205,13 @@ function HomePage() {
           ></ProductCard>
         </Advertise>
 
-        <span>Gaming Accessories</span>
+        <CategoryTitle>
+          <img
+            src="/CategoryTitle/GamingAC.png"
+            alt="Game"
+            style={{ width: "380px" }}
+          />
+        </CategoryTitle>
         <div className="ItemsContainer">
           {accProducts.map((accProducts, index) => (
             <div key={index}>
