@@ -1,0 +1,48 @@
+.cloud1,
+.cloud2,
+.cloud3 {
+  height: auto;
+  object-fit: contain;
+
+  z-index: 3;
+  top: 10rem;
+  left: -6rem;
+
+  position: absolute;
+}
+.cloud2 {
+  position: absolute;
+  top: 15rem;
+  right: 60rem;
+}
+.cloud3 {
+  position: absolute;
+  top: 17rem;
+  left: 70vw;
+}
+.cloud4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  width: 100%;
+
+  height: auto;
+}
+.cloud4 img {
+  margin: 1rem;
+  width: 70%;
+}
+
+/* Responsive */
+/* @media screen and (max-width: 480px) {
+  .cloud4 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    width: 70%;
+
+    height: auto;
+  }
+} */

@@ -64,3 +64,12 @@
   background-color: #cbb700;
   color: black;
 }
+
+div.Collapsible__contentInner {
+  margin: 2rem;
+  text-align: justify;
+
+  background-color: white;
+
+  border-radius: 18px;
+}

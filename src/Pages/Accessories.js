@@ -7,7 +7,7 @@ const url =
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "19ed09e4c0msh06e34c0f07b6070p167f93jsn81a0b8b13e2f",
+    "X-RapidAPI-Key": "e8d0cfb23bmsh321dada6fbd4a11p19ac25jsnf55cc8978c2c",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };

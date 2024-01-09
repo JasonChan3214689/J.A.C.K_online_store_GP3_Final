@@ -242,15 +242,7 @@ const resultArray = [
     productTypes: "Building Sets",
     tcin: "80130334",
   },
-  {
-    image:
-      "https://target.scene7.com/is/image/Target/GUEST_9a3c8a89-8104-41fa-8699-ded1ea81dc15",
-    name: "Nintendo Switch - OLED Model with White Joy-Con",
-    price: 349.99,
-    priceType: "reg",
-    productTypes: "Video Game Consoles",
-    tcin: "83887639",
-  },
+
   {
     image:
       "https://target.scene7.com/is/image/Target/GUEST_253e0f69-ca09-4b10-962e-193bd9908300",

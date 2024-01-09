@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { hotKeyA, hotKeyB, hotKeyC, hotKeyD } from "./hotKey";
+import { Link } from "react-router-dom";
 
 export default function SearchBar({ onSearch }) {
   const [input, setInput] = useState("");
@@ -7,7 +9,7 @@ export default function SearchBar({ onSearch }) {
 
   const handleSearch = () => {
     onSearch(input);
-    navigate("/search-results");
+    navigate(`/search-results/${input}`);
   };
 
   return (
@@ -28,14 +30,24 @@ export default function SearchBar({ onSearch }) {
       <div className="HotText">
         <span>HOT</span>
         <img
-          src="/hot-sale.png"
+          src="/calciferFire.gif"
           alt="fire icon"
-          style={{ width: "15px", height: "20px" }}
+          style={{ width: "30px", height: "35px" }}
         />
-        <span>: Zelda </span>
-        <span> PS5</span>
-        <span> Switch</span>
-        <span> 星之卡比</span>
+
+        <span>
+          :<span />
+          <Link to={`/search-results/${hotKeyA}`}>Zelda</Link>
+        </span>
+        <span>
+          <Link to={`/search-results/${hotKeyB}`}>Switch</Link>
+        </span>
+        <span>
+          <Link to={`/search-results/${hotKeyC}`}>Mario</Link>
+        </span>
+        <span>
+          <Link to={`/search-results/${hotKeyD}`}>Minecraft</Link>
+        </span>
       </div>
     </>
   );

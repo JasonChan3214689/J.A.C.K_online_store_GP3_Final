@@ -6,11 +6,23 @@ import ProductDec from "./ProductDec";
 import Loading from "./Loading";
 import ItemVideo from "./ItemVideo";
 import ItemAccordion from "./ItemAccordion";
+import { motion } from "framer-motion";
+// import { Interweave } from "interweave";
+import ProductDetailsDesc from "./ProductDetailsDesc";
+import { useMediaQuery } from "react-responsive";
+import {
+  cloud1Container,
+  cloud2Container,
+  cloud3Container,
+  cloud4Container,
+} from "./ProductDeAnimation";
+// import ProductDeAnimation from "./ProductDeAnimation";
+import { useInView } from "react-intersection-observer";
 
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "446a6d1012msha37eac4c1ae6963p1fefa7jsn7b2f1aed8e54",
+    "X-RapidAPI-Key": "fd4cdf267dmshf9ba548d97d58f0p15a881jsn5c672e1c5f1c",
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };
@@ -28,6 +40,7 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
           setIsLoading(true);
           const response = await fetch(PdtDetailsUrl, options);
           const dataSet = await response.json();
+          console.log(dataSet);
           console.log(dataSet);
           const result = dataSet.data.product;
           console.log(result);
@@ -50,6 +63,7 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
             //return policy
             //other prices
           };
+
           const extractedProducts = Object.entries(preExtractedProducts).reduce(
             (filtered, [key, value]) => {
               if (value) {
@@ -69,6 +83,24 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
     };
     fetchingFn();
   }, []);
+  //Animation
+  const inSzLimit = useMediaQuery({ minWidth: 650 });
+  const [isVisible, setVisible] = useState(false);
+
+  const handleVisible = () => {
+    setVisible(true);
+  };
+
+  const [ref, inView] = useInView({
+    threshold: 0.5, // Adjust this threshold as needed
+
+    onEnter: handleVisible,
+  });
+  const [ref2, inView2] = useInView({
+    threshold: 0.1, // Adjust this threshold as needed
+
+    onEnter: handleVisible,
+  });
 
   return (
     <div className="ProductDetails">
@@ -87,17 +119,37 @@ const ProductDetails = ({ shoppingCartItem, onShoppingCartitem }) => {
             />
           </div>
           <div className="PD_Bottom">
-            <div className="aboutThisItem">About This Item</div>
+            <div className="aboutThisItem" ref={ref}>
+              About This Item
+              {inSzLimit && inView && cloud1Container}
+              {inSzLimit && inView && cloud2Container}
+              {inSzLimit && inView && cloud3Container}
+            </div>
+            {/* Background video 1 */}
+            <video className="background-video" autoPlay loop muted>
+              <source src={"/pdtDescBackground.mp4"} type="video/mp4" />
+            </video>
 
             {details.video && (
-              <div className="ItemVideo">
+              <motion.div
+                className="ItemVideo"
+                initial={{ opacity: 0.5, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3 }}
+              >
                 <ItemVideo video={details.video} />
-              </div>
+              </motion.div>
             )}
-
+            <div>{cloud4Container}</div>
+            <div className="BottomDiv" ref2={ref2}>
+              <ProductDetailsDesc
+                detailsDesc={details.desc ? details.desc : null}
+              />
+            </div>
+            {console.log(typeof details.desc)}
             <div className="Accordion">
               <ItemAccordion
-                itemDesc={details.desc || null}
+                // itemDesc={details.desc || null}
                 bulletDesc={details.bulletDesc || null}
                 softBulletDesc={details.softBulletDesc || null}
                 packaging={details.packaging ? details.packaging : null}

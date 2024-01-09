@@ -1,6 +1,6 @@
 body {
   font-size: 18px;
-  max-width: 1440px;
+  max-width: 100vw;
   margin: 0 auto;
   font-family: "Inter", sans-serif;
 }
@@ -25,15 +25,21 @@ div.NavBar li {
 
 div.Header {
   display: flex;
-  position: relative;
-  justify-content: center;
+  /* position: relative; */
+  justify-content: space-between;
+  width: 100vw;
+}
+div.Header > * {
+  flex: 1 1 auto;
 }
 
 /* search textbox */
 
 .search-container {
   display: flex;
+  margin-left: 0.5rem;
   align-items: center;
+  width: 60%;
 }
 
 div.SearchBarCotainer img {
@@ -48,7 +54,7 @@ div.SearchBarCotainer span {
 .searchInput {
   padding-left: 20px;
   margin-right: 20px;
-  width: 600px;
+  width: 80%;
   height: 40px;
   border-radius: 150px;
   border-width: 0px;
@@ -64,6 +70,16 @@ button.SearchButton {
 
 .HotText {
   margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+.HotText a {
+  color: #444;
+}
+.HotText img {
+  margin-left: -0.7rem !important;
+  margin-right: -0.5rem !important;
+  margin-bottom: -0.5rem !important;
 }
 
 /* Filter button */
@@ -189,21 +205,32 @@ button.SearchButton {
   display: flex;
   min-width: 100%;
   width: 100%;
+  justify-content: space-between;
+
   background-color: #f82330;
 }
 
 .SocialMediaIcon {
-  flex: 0 0 80%;
+  flex: 1 1 auto;
 }
 
 .CompanyName {
   color: #d9d9d9;
-  flex: 0 0 20%;
+  /* flex: 1 1 30%; */
+  margin-right: 1rem;
 }
 
 .SocialMediaIcon img {
   padding: 0.8rem;
   padding-left: 2rem;
+}
+
+.SocialMediaIcon a {
+  width: 10%;
+}
+div:has(> a[href="/AboutUs"]) {
+  margin-top: 1.2rem;
+  margin-right: 0.5rem;
 }
 
 .CompanyName img {
@@ -318,6 +345,33 @@ a {
   .Header {
     flex-direction: column;
   }
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    width: 100%;
+
+    background-color: #f82330;
+  }
+  .footerContainer a {
+    margin: 0rem;
+  }
+  .CompanyName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -0.5rem;
+    margin-right: 0;
+  }
+  .CompanyName img {
+    position: relative;
+    top: -0.7rem;
+  }
+  div:has(> a[href="/AboutUs"]) {
+    margin-top: -0.7rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -365,11 +419,39 @@ a {
   .CompanyName {
     flex: 1;
     text-align: center;
+    font-size: 1rem;
   }
 
   .SocialMediaIcon img,
   .CompanyName img {
     padding: 1rem;
+  }
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    width: 100%;
+
+    background-color: #f82330;
+  }
+  .footerContainer a {
+    margin: 0rem;
+  }
+  .CompanyName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -0.5rem;
+    margin-right: 0;
+  }
+  .CompanyName img {
+    position: relative;
+    top: -0.7rem;
+  }
+  div:has(> a[href="/AboutUs"]) {
+    margin-top: -0.7rem;
   }
 }
 
@@ -389,6 +471,33 @@ a {
   .ProductTitle,
   .ProductPrice {
     font-size: 14px;
+  }
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    width: 100%;
+
+    background-color: #f82330;
+  }
+  .footerContainer a {
+    margin: 0rem;
+  }
+  .CompanyName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -0.5rem;
+    margin-right: 0;
+  }
+  .CompanyName img {
+    position: relative;
+    top: -0.7rem;
+  }
+  div:has(> a[href="/AboutUs"]) {
+    margin-top: -0.7rem;
   }
 }
 
@@ -414,6 +523,33 @@ a {
     top: -10px;
     right: -10px;
   }
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    width: 100%;
+
+    background-color: #f82330;
+  }
+  .footerContainer a {
+    margin: 0rem;
+  }
+  .CompanyName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -0.5rem;
+    margin-right: 0;
+  }
+  .CompanyName img {
+    position: relative;
+    top: -0.7rem;
+  }
+  div:has(> a[href="/AboutUs"]) {
+    margin-top: -0.7rem;
+  }
 }
 
 .burger-menu {
@@ -435,5 +571,32 @@ a {
   }
   .mobile-menu {
     display: block;
+  }
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    width: 100%;
+
+    background-color: #f82330;
+  }
+  .footerContainer a {
+    margin: 0rem;
+  }
+  .CompanyName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .CompanyName img {
+    position: relative;
+    top: -0.7rem;
+  }
+  div:has(> a[href="/AboutUs"]) {
+    margin-top: -0.7rem;
   }
 }

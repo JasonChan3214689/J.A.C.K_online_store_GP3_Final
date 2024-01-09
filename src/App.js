@@ -20,6 +20,8 @@ import Ad2 from "./AdFunction/Ad2";
 import CheckoutPage from "./ShoppingCart/CheckOutpage";
 import CheckOutSucessful from "./ShoppingCart/CheckOutSucessful";
 
+import { hotKeyA, hotKeyB, hotKeyC, hotKeyD } from "./hotKey";
+
 const url =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Video%20Game%20Accessories&count=20&offset=0&faceted_value=5tal2&default_purchasability_filter=true&sort_by=relevance";
 
@@ -125,7 +127,31 @@ function App() {
             <Route path="/Pages/Games" element={<Games />}></Route>
             <Route path="/Pages/Accessories" element={<Accessories />}></Route>
             <Route
-              path="/search-results"
+              path={`/search-results/${hotKeyA}`}
+              element={
+                <SearchResults keyword={hotKeyA} totalResults={totalResults} />
+              }
+            ></Route>
+            <Route
+              path={`/search-results/${hotKeyB}`}
+              element={
+                <SearchResults keyword={hotKeyB} totalResults={totalResults} />
+              }
+            ></Route>
+            <Route
+              path={`/search-results/${hotKeyC}`}
+              element={
+                <SearchResults keyword={hotKeyC} totalResults={totalResults} />
+              }
+            ></Route>
+            <Route
+              path={`/search-results/${hotKeyD}`}
+              element={
+                <SearchResults keyword={hotKeyD} totalResults={totalResults} />
+              }
+            ></Route>
+            <Route
+              path={`/search-results/${searchKeyword}`}
               element={
                 <SearchResults
                   keyword={searchKeyword}
