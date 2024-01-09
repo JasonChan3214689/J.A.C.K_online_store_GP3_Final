@@ -1,5 +1,5 @@
-import Input from "./Input";
 import { useState } from "react";
+import Slider from "./Slider";
 
 export default function Pricefilter({ handleChange }) {
   const [open, setOpen] = useState(false);
@@ -16,12 +16,13 @@ export default function Pricefilter({ handleChange }) {
       </button>
       {open && (
         <>
-          <Input
+          <Slider handleChange={handleChange}></Slider>
+          {/* <Input
             handleChange={handleChange}
             value="sale"
             title="sale"
             name="brand"
-          />
+          /> */}
           {/* <Input
             handleChange={handleChange}
             value={15}

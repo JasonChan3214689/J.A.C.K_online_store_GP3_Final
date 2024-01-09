@@ -3,10 +3,10 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-export default function ProductCard({
+export default function ProductCard3({
   image,
   name,
-
+  discount,
   originalPrice,
   price,
   priceType,
@@ -51,11 +51,18 @@ export default function ProductCard({
       <div className="ProductTitle">{name}</div>
 
       <div className="ProductPrice">
-        <div className="originalPrice">
-          <s>{originalPrice}</s>
-        </div>
-        <span>{price}</span>
-        <span>{rating}</span>
+        {priceType === "sale" && (
+          <div className="originalPrice">
+            <s>{originalPrice}</s>
+          </div>
+        )}
+        <span
+          className="pricetag"
+          style={{ color: priceType === "sale" ? "red" : "inherit" }}
+        >
+          {price}
+        </span>
+        {priceType === "sale" && <span className="discount">({discount})</span>}
       </div>
     </motion.div>
   );

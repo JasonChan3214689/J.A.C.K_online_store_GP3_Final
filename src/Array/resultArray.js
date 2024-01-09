@@ -3,9 +3,10 @@ const resultArray = [
     image:
       "https://target.scene7.com/is/image/Target/GUEST_2f214b56-682d-49b4-bc34-2cdbc2856d12",
     name: "Insten Carrying Case With 29 Game Slots For Nintendo Switch & OLED Model Console, Controllers and Accessories, Portable Travel Cover, Black",
+    originalPrice: 23.99,
     price: 12.99,
     priceType: "sale",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "78260338",
   },
   {
@@ -14,7 +15,7 @@ const resultArray = [
     name: "Quest 2 Elite Strap",
     price: 49.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "80899803",
   },
   {
@@ -23,7 +24,7 @@ const resultArray = [
     name: "PlayStation 5 Media Remote",
     price: 29.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "81114476",
   },
   {
@@ -32,7 +33,7 @@ const resultArray = [
     name: "Nintendo Switch AC Adapter",
     price: 29.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "52180555",
   },
   {
@@ -41,7 +42,7 @@ const resultArray = [
     name: "Nintendo Switch Game Traveler Deluxe Travel Case - Light Grey",
     price: 19.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "86166467",
   },
   {
@@ -50,7 +51,7 @@ const resultArray = [
     name: "Controller Grips Gioteck Ergonomic Design for Xbox One Wireless Controller",
     price: 7.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "49146456",
   },
   {
@@ -59,7 +60,7 @@ const resultArray = [
     name: "Controller Grips Gioteck Ergonomic Design for PlayStation 4 DualShock Wireless Controller",
     price: 7.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "49146454",
   },
   {
@@ -68,7 +69,7 @@ const resultArray = [
     name: "Xbox Cable Guys Ikon Phone and Controller Holder",
     price: 29.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "89153324",
   },
   {
@@ -77,7 +78,7 @@ const resultArray = [
     name: "Nintendo Switch Game Traveler Slim Traveler Case",
     price: 9.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "76439793",
   },
   {
@@ -86,7 +87,7 @@ const resultArray = [
     name: "Nintendo Switch Leg Strap",
     price: 9.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "86197154",
   },
   {
@@ -95,7 +96,7 @@ const resultArray = [
     name: "HALO: Infinite Cable Guy Phone and Controller Holder - Master Chief",
     price: 29.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "80272808",
   },
   {
@@ -104,7 +105,7 @@ const resultArray = [
     name: "Vertical Stand for PlayStation 5",
     price: 29.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "90228147",
   },
   {
@@ -113,7 +114,7 @@ const resultArray = [
     name: "PlayStation Link USB Adapter for PlayStation 5",
     price: 24.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "90283303",
   },
   {
@@ -122,7 +123,7 @@ const resultArray = [
     name: "Quest 2 Elite Strap with Battery",
     price: 89.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "83984388",
   },
   {
@@ -131,7 +132,7 @@ const resultArray = [
     name: "Meta Quest 3 Elite Strap",
     price: 69.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "89426848",
   },
   {
@@ -140,43 +141,47 @@ const resultArray = [
     name: "Pok&#233;mon GO Plus +",
     price: 54.99,
     priceType: "reg",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "88714054",
   },
   {
     image:
       "https://target.scene7.com/is/image/Target/GUEST_0fbf8f3c-1680-4afe-b5f9-39d0fb4f1ccd",
     name: "Insten Raised Carrying Case with 10 Game Slots Holder for Nintendo Switch Lite - Portable & Protective Travel Cover Accessories, Blue",
+    originalPrice: 20.99,
     price: 14.99,
     priceType: "sale",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "81644257",
   },
   {
     image:
       "https://target.scene7.com/is/image/Target/GUEST_5efbdb8d-c748-4cf3-83bf-2bbeae59ee15",
     name: "Insten Joy Con Charger for Nintendo Switch and OLED Model 4 in 1 Joy-Con Charging Station Dock with LED Charge Indicator for Switch JoyCon Accessories",
+    originalPrice: 28.99,
     price: 17.99,
     priceType: "sale",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "78648285",
   },
   {
     image:
       "https://target.scene7.com/is/image/Target/GUEST_48285857-d469-4c0c-acd6-a1d18d47bb7d",
     name: "Insten Fast 4-in-1 Charger for Nintendo Switch & OLED Model Joycon Controller with RGB LED Indicator, Charging Station & Dock Joy Cons Accessories",
+    originalPrice: 36.99,
     price: 18.99,
     priceType: "sale",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "81411368",
   },
   {
     image:
       "https://target.scene7.com/is/image/Target/GUEST_4e832392-1aa4-4d18-b518-513f80422bd7",
     name: "INSTEN For Nintendo Switch and OLED Model 24-in-1 Game Card Storage Case, Black",
+    originalPrice: 16.99,
     price: 8.99,
     priceType: "sale",
-    productTypes: "Video Game Hardware Accessories",
+    productTypes: "Accessories",
     tcin: "78787372",
   },
   {
@@ -185,7 +190,7 @@ const resultArray = [
     name: "Nintendo Switch - OLED Model: Mario Red Edition",
     price: 349.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Console",
     tcin: "89821840",
   },
   {
@@ -194,7 +199,7 @@ const resultArray = [
     name: "Nintendo Switch with Neon Blue and Neon Red Joy-Con",
     price: 299.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "77464001",
   },
   {
@@ -203,7 +208,7 @@ const resultArray = [
     name: "Xbox Series X Console",
     price: 499.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "80790841",
   },
   {
@@ -212,7 +217,7 @@ const resultArray = [
     name: "Xbox Series S - Starter Bundle",
     price: 299.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "89786038",
   },
   {
@@ -221,7 +226,7 @@ const resultArray = [
     name: "I'm Game 220 Exciting Games in one handheld Player - Blue",
     price: 54.9,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "90216376",
   },
   {
@@ -230,7 +235,7 @@ const resultArray = [
     name: "Nintendo Switch with Neon Blue and Neon Red Joy-Con",
     price: 299.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "77464001",
   },
   {
@@ -245,11 +250,20 @@ const resultArray = [
 
   {
     image:
+      "https://target.scene7.com/is/image/Target/GUEST_9a3c8a89-8104-41fa-8699-ded1ea81dc15",
+    name: "Nintendo Switch - OLED Model with White Joy-Con",
+    price: 349.99,
+    priceType: "reg",
+    productTypes: "Consoles",
+    tcin: "83887639",
+  },
+  {
+    image:
       "https://target.scene7.com/is/image/Target/GUEST_253e0f69-ca09-4b10-962e-193bd9908300",
     name: "Nintendo Switch Lite - Blue",
     price: 199.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "82824139",
   },
   {
@@ -258,7 +272,7 @@ const resultArray = [
     name: "Nintendo Switch with Gray Joy-Con",
     price: 299.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "77464002",
   },
   {
@@ -267,7 +281,7 @@ const resultArray = [
     name: "Nintendo Switch - OLED Model with Neon Red &#38; Neon Blue Joy-Con",
     price: 349.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "83887640",
   },
   {
@@ -276,7 +290,7 @@ const resultArray = [
     name: "Nintendo Switch Lite - Animal Crossing: New Horizons Bundle - Isabelle&#39;s Aloha Edition",
     price: 199.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "89613017",
   },
   {
@@ -285,7 +299,7 @@ const resultArray = [
     name: "Nintendo Switch - OLED Model: Mario Red Edition",
     price: 349.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "89821840",
   },
   {
@@ -294,7 +308,7 @@ const resultArray = [
     name: "Nintendo Switch + MarioKart 8 Deluxe Special Edition Bundle",
     price: 299.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "87674254",
   },
   {
@@ -303,7 +317,7 @@ const resultArray = [
     name: "Xbox Series S 1TB Console - Black",
     price: 349.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "89382726",
   },
   {
@@ -312,7 +326,7 @@ const resultArray = [
     name: "Xbox Series X Console - Xbox All Access",
     price: 499.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "85781878",
   },
   {
@@ -321,7 +335,7 @@ const resultArray = [
     name: "Xbox Series X Console - Diablo IV Bundle",
     price: 559.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "88668323",
   },
   {
@@ -330,7 +344,7 @@ const resultArray = [
     name: "Microsoft Xbox One S 1TB Gaming Console Minecraft Edition with Wireless Controller Manufacturer Refurbished",
     price: 548.79,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "89167718",
   },
   {
@@ -339,7 +353,7 @@ const resultArray = [
     name: "PlayStation 5 God of War Ragnarok Console with Wireless Controller",
     price: 559.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "87800909",
   },
   {
@@ -348,7 +362,7 @@ const resultArray = [
     name: "Arcade1Up Terminator 2 Judgment Day Home Arcade",
     price: 699.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "86767426",
   },
   {
@@ -357,16 +371,17 @@ const resultArray = [
     name: "PlayStation 5 Console Marvel&#39;s Spider-Man 2 Bundle",
     price: 499.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "89981366",
   },
   {
     image:
       "https://target.scene7.com/is/image/Target/GUEST_1fd0b61c-6d3c-4e65-a02c-2b688bb32c66",
     name: "Arcade1Up Golden Tee 3D Golf Home Arcade",
+    originalPrice: 709.99,
     price: 649.99,
     priceType: "sale",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "86817072",
   },
   {
@@ -375,7 +390,7 @@ const resultArray = [
     name: "Arcade1Up Marvel vs Capcom 2 Home Arcade",
     price: 599.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "87461935",
   },
   {
@@ -384,7 +399,7 @@ const resultArray = [
     name: "Nintendo Switch Lite - Turquoise",
     price: 199.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "77419248",
   },
   {
@@ -393,7 +408,7 @@ const resultArray = [
     name: "Nintendo Switch with Neon Blue and Neon Red Joy-Con",
     price: 299.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "77464001",
   },
   {
@@ -427,6 +442,7 @@ const resultArray = [
     image:
       "https://target.scene7.com/is/image/Target/GUEST_e2f359b4-9c95-4b8c-b089-c5a04e002434",
     name: "Mario &#38; Sonic at the Olympic Games: Tokyo 2020 - Nintendo Switch",
+    originalPrice: 59.99,
     price: 39.99,
     priceType: "sale",
     productTypes: "Video Games",
@@ -438,7 +454,7 @@ const resultArray = [
     name: "Nintendo Switch Lite - Animal Crossing: New Horizons Bundle - Isabelle&#39;s Aloha Edition",
     price: 199.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "89613017",
   },
   {
@@ -447,7 +463,7 @@ const resultArray = [
     name: "Nintendo Switch - OLED Model with White Joy-Con",
     price: 349.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "83887639",
   },
   {
@@ -456,7 +472,7 @@ const resultArray = [
     name: "Nintendo Switch - OLED Model with Neon Red &#38; Neon Blue Joy-Con",
     price: 349.99,
     priceType: "reg",
-    productTypes: "Video Game Consoles",
+    productTypes: "Consoles",
     tcin: "83887640",
   },
   {
@@ -517,6 +533,7 @@ const resultArray = [
     image:
       "https://target.scene7.com/is/image/Target/GUEST_bf2f1486-aab4-467a-975b-7dda97bc428b",
     name: "Sonic Colors Ultimate - Nintendo Switch",
+    originalPrice: 49.99,
     price: 24.99,
     priceType: "sale",
     productTypes: "Video Games",
@@ -607,7 +624,7 @@ const resultArray = [
     image:
       "https://target.scene7.com/is/image/Target/GUEST_3b31e221-10c5-493e-8c40-3ff96e550f9a",
     name: "Meta Quest 3 Silicone Facial Interface",
-    price: "$39.99",
+    price: 39.99,
     priceType: "reg",
     tcin: "89426850",
   },
@@ -615,33 +632,268 @@ const resultArray = [
     image:
       "https://target.scene7.com/is/image/Target/GUEST_f8abd6e2-130c-423d-a78a-25cf42645651",
     name: "Insten Game Storage Tower For PS5 PS4 xBox One Ser… Controllers, Gaming Headset & Accessories, Black",
-    price: "$29.99",
+    originalPrice: 49.99,
+    price: 29.99,
     priceType: "sale",
     tcin: "83839307",
   },
-  {
-    image:
-      "https://target.scene7.com/is/image/Target/GUEST_0fbf8f3c-1680-4afe-b5f9-39d0fb4f1ccd",
-    name: "Insten Raised Carrying Case with 10 Game Slots Hol…table & Protective Travel Cover Accessories, Blue",
-    price: "$14.99",
-    priceType: "sale",
-    tcin: "81644257",
-  },
-  {
-    image:
-      "https://target.scene7.com/is/image/Target/GUEST_5efbdb8d-c748-4cf3-83bf-2bbeae59ee15",
-    name: "Insten Joy Con Charger for Nintendo Switch and OLE…ED Charge Indicator for Switch JoyCon Accessories",
-    price: "$17.99",
-    priceType: "sale",
-    tcin: "78648285",
-  },
+
   {
     image:
       "https://target.scene7.com/is/image/Target/GUEST_cd7cbbf6-841f-42f1-ac68-d5c9a77b270a",
     name: "Microsoft Xbox One S 1TB Gaming Console Minecraft …with Wireless Controller Manufacturer Refurbished",
-    price: "$548.79",
+    price: 548.79,
     priceType: "reg",
     tcin: "89167718",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_57bbec2f-28e8-40ab-885a-ae1976302fdd",
+    name: "Mario Kart 8 Deluxe - Nintendo Switch",
+    originalPrice: 59.99,
+    price: 50.99,
+    priceType: "sale",
+    tcin: "52161278",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_b9653cbb-ab8e-434b-bc2f-37fed8065968",
+    name: "Samba de Amigo: Party Central - Nintendo Switch",
+    originalPrice: 28.99,
+    price: 14.99,
+    priceType: "sale",
+    tcin: "88544558",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_a4558d26-87b5-4915-9336-32bf394481c3",
+    name: "Sonic Origins Plus - Nintendo Switch",
+    originalPrice: 29.99,
+    price: 24.99,
+    priceType: "sale",
+    tcin: "88879589",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_7a62a876-b178-4d11-884f-af4d808cc05e",
+    name: "Madden NFL 24 - PlayStation 4",
+    price: 69.99,
+    priceType: "reg",
+    productTypes: "Video Games",
+    tcin: "89243387",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_2b9959bd-fe70-4c0c-89e8-d7ab280da2a0",
+    name: "NBA 2K24 Kobe Bryant Edition - PlayStation 5",
+    price: 69.99,
+    priceType: "reg",
+    productTypes: "Video Games",
+    tcin: "89479019",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_6c110700-ae27-43a9-8fac-f79576cee8de",
+    name: "Marvels Spider-Man: Miles Morales - PlayStation 5",
+    originalPrice: 49.99,
+    price: 19.99,
+    priceType: "sale",
+    productTypes: "Video Games",
+    tcin: "81255580",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_240514c5-15fd-45ea-81fb-c366f5dce502",
+    name: "Marvels Spider-Man: Game of the Year Edition - PlayStation 4",
+    originalPrice: 39.99,
+    price: 19.99,
+    priceType: "sale",
+    productTypes: "Video Games",
+    tcin: "77470993",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_2fd54c85-ab69-44cc-92cf-65efb170e4ff",
+    name: "Disney Classic Games Collection - PlayStation 4",
+    price: 19.99,
+    priceType: "reg",
+    productTypes: "Video Games",
+    tcin: "84648631",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_d9e55591-9abd-4d15-a6fe-a0e97586bb9f",
+    name: "Mortal Kombat 1 - PlayStation 5",
+    productTypes: "Video Games",
+    price: 48.99,
+    priceType: "reg",
+    tcin: "89209390",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_dc20118f-ab5c-4d5c-a8ce-5c100abc0345",
+    name: "Evil Dead: The Game - PlayStation 5",
+    productTypes: "Video Games",
+    price: 39.99,
+    priceType: "reg",
+    tcin: "85896485",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_710bdb24-a458-499d-a469-41b58c63d260",
+    name: "Gigantosaurus The Game - PlayStation 4",
+    productTypes: "Video Games",
+    price: 19.99,
+    priceType: "reg",
+    tcin: "79579067",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_09743b68-f437-4de2-abeb-d605ef351383",
+    name: "FIFA 23 - PlayStation 4",
+    productTypes: "Video Games",
+    price: 29.99,
+    priceType: "reg",
+    tcin: "87253276",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_51912071-93e6-41e7-8d89-01412dbfefc0",
+    name: "Minecraft - PlayStation 4",
+    productTypes: "Video Games",
+    price: 29.99,
+    priceType: "reg",
+    tcin: "78857526",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_5c124187-6595-40b2-9fed-50b9ff1238d2",
+    name: "Grand Theft Auto V: Premium Edition - PlayStation 4",
+    productTypes: "Video Games",
+    price: 29.99,
+    priceType: "reg",
+    tcin: "53711597",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_4bc325c4-ba44-4236-83dc-7c4007a6299b",
+    name: "LEGO DC Super-Villains (Deluxe Edition) - PlayStation 4",
+    productTypes: "Video Games",
+    price: 54.99,
+    priceType: "reg",
+    tcin: "81875502",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_5561909b-c622-4e73-b58a-4a4a193a8d5e",
+    name: "Just Dance 2021 - PlayStation 4",
+    productTypes: "Video Games",
+    price: 29.99,
+    priceType: "reg",
+    tcin: "80847749",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_4c32c683-9b14-4c97-9e47-bbce4edf4684",
+    name: "EA Sports FC 24 - PlayStation 4",
+    productTypes: "Video Games",
+    price: 66.99,
+    priceType: "reg",
+    tcin: "89453526",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_24276690-658f-4030-b756-63ab94e6aa76",
+    name: "Madden NFL 24 - PlayStation 5",
+    productTypes: "Video Games",
+    price: 69.99,
+    priceType: "reg",
+    tcin: "89243374",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_0a98935c-bb63-49b6-a6a2-b8bc154b6151",
+    name: "Hogwarts Legacy - Xbox Series X",
+    productTypes: "Video Games",
+    price: 69.99,
+    priceType: "reg",
+    tcin: "86267032",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_4e057d7d-093b-4513-bc7a-2bdf7392c737",
+    name: "Call of Duty: Modern Warfare II - Xbox Series X/Xbox One",
+    originalPrice: 69.99,
+    price: 49.99,
+    productTypes: "Video Games",
+    priceType: "sale",
+    tcin: "86898314",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_23127e12-3d6e-4dde-b429-4713e5068645",
+    name: "Call of Duty: Vanguard - Xbox Series X/Xbox One",
+    originalPrice: 69.99,
+    price: 55.99,
+    priceType: "sale",
+    productTypes: "Video Games",
+    tcin: "84198988",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_df9c5dd2-3549-4898-aafb-6a0255635230",
+    name: "Need For Speed: Unbound - Xbox Series X",
+    productTypes: "Video Games",
+    price: 29.99,
+    priceType: "reg",
+    tcin: "87543350",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_f86710df-9f9f-427a-bca0-419f521de296",
+    name: "EA Sports FC 24 - Xbox Series X/Xbox One",
+    originalPrice: 66.99,
+    price: 34.99,
+    priceType: "sale",
+    productTypes: "Video Games",
+    tcin: "89453525",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_9749b706-9560-47c5-a4e2-609ef802deda",
+    name: "Forza Horizon 5 - Xbox Series X|S/Xbox One (Digital)",
+    productTypes: "Video Games",
+    price: 59.99,
+    priceType: "reg",
+    tcin: "84085063",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_d199071a-ab6c-45d2-9d0c-d9e4b0c79ecc",
+    name: "Marvels Guardians of the Galaxy - Xbox Series X/Xbox One",
+    productTypes: "Video Games",
+    price: 26.49,
+    priceType: "reg",
+    tcin: "83727088",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_0eca8076-a6a6-44d3-8bc0-f0e0864792c7",
+    name: "Fortnite: The Minty Legends Pack - Xbox Series X|S/Xbox One (Digital)",
+    productTypes: "Video Games",
+    price: 29.488,
+    priceType: "reg",
+    tcin: "84638443",
+  },
+  {
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_ca1ab01b-063c-484a-bb17-fd1f57400b1e",
+    name: "LEGO Marvel Collection for Xbox One",
+    originalPrice: 32.99,
+    price: 25.71,
+    priceType: "sale",
+    productTypes: "Video Games",
+    tcin: "86125363",
   },
 ];
 

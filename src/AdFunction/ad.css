@@ -1,0 +1,11 @@
+.sale-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.discount {
+  color: grey;
+  font-weight: 400;
+}

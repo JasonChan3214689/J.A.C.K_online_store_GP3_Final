@@ -11,26 +11,21 @@ import { useState } from "react";
 import Games from "./Pages/Games";
 import Accessories from "./Pages/Accessories";
 import Consoles from "./Pages/Consoles";
+
+import { hotKeyA, hotKeyB, hotKeyC, hotKeyD } from "./hotKey";
 import ShoppingCart from "./ShoppingCart";
 import AboutUs from "./AboutUs";
 import ShoppingCartPage from "./ShoppingCart/ShoppingCartPage";
 import Advertisement from "./AdFunction/Advertisement";
 import Ad2 from "./AdFunction/Ad2";
-
 import CheckoutPage from "./ShoppingCart/CheckOutpage";
 import CheckOutSucessful from "./ShoppingCart/CheckOutSucessful";
-
-import { hotKeyA, hotKeyB, hotKeyC, hotKeyD } from "./hotKey";
-
 const url =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Video%20Game%20Accessories&count=20&offset=0&faceted_value=5tal2&default_purchasability_filter=true&sort_by=relevance";
-
 const conUrl =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=video%20game%20consoles&count=20&offset=0&default_purchasability_filter=true&sort_by=relevance";
-
 const NintendoUrl =
   "https://target1.p.rapidapi.com/products/v2/list?store_id=911&category=5xtg6&keyword=Nintendo%20Switch%20Games&count=20&offset=0&default_purchasability_filter=true&sort_by=relevance";
-
 /*const options = {
   method: "GET",
   headers: {
@@ -38,34 +33,25 @@ const NintendoUrl =
     "X-RapidAPI-Host": "target1.p.rapidapi.com",
   },
 };*/
-
 function App() {
   const [totalResults, setTotalResults] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("");
   const [shoppingCartItem, setshoppingCartItem] = useState([]);
   const [clientGrandTotal, setGrandTotal] = useState(0);
-
   // Fetch 全部資料
-
   const resultArray = require("./Array/resultArray");
   console.log(resultArray);
-
   useEffect(() => {
     setTotalResults(resultArray.default);
   }, []);
-
   /*useEffect(() => {
     const fetchAllData = async () => {
       try {
         const urls = [url, conUrl, NintendoUrl];
-
         const responses = await Promise.all(urls.map((u) => fetch(u, options)));
-
         const dataSets = await Promise.all(responses.map((res) => res.json()));
-
         const totalResultArray = dataSets.flatMap((dataSet) => {
           const result = dataSet.data.search.products;
-
           return result.map((product) => {
             const priceString = product.price.formatted_current_price;
             const numericPriceString = priceString.replace(/[^0-9.]/g, "");
@@ -80,17 +66,14 @@ function App() {
             };
           });
         });
-
         setTotalResults(totalResultArray);
         console.log(totalResultArray);
       } catch (error) {
         console.error(error);
       }
     };
-
     fetchAllData();
   }, []);*/
-
   useEffect(() => {
     console.log("Loading items from local storage on mount");
     const savedCartItems = localStorage.getItem("shoppingCartItems");
@@ -101,17 +84,14 @@ function App() {
       console.log("No saved items found in local storage");
     }
   }, []);
-
   useEffect(() => {
     console.log("Setting items to local storage", shoppingCartItem);
     localStorage.setItem("shoppingCartItems", JSON.stringify(shoppingCartItem));
   }, [shoppingCartItem]);
-
   function handleAddShoppingCartButton(value) {
     console.log("Updating shopping cart items: ", value);
     setshoppingCartItem((item) => [...item, value]);
   }
-
   return (
     <>
       <Router>
@@ -172,7 +152,6 @@ function App() {
               path="/AdFunction/Advertisement"
               element={<Advertisement saleresult={totalResults} />}
             ></Route>
-            <Route path="/AdFunction/Ad2" element={<Ad2 />}></Route>
             <Route path={`/product/:tcin`} element={<ProductDetails />}></Route>
             <Route path="/login/signin" element={<SignIn />}></Route>
             <Route path="/login/create-account" element={<CreateAcc />}></Route>
@@ -202,6 +181,22 @@ function App() {
                 <CheckOutSucessful setshoppingCartItem={setshoppingCartItem} />
               }
             ></Route>
+            <Route path="/AboutUs" element={<AboutUs />}></Route>
+            <Route
+              path="/Checkout"
+              element={
+                <CheckoutPage
+                  clientGrandTotal={clientGrandTotal}
+                  setshoppingCartItem={setshoppingCartItem}
+                />
+              }
+            ></Route>
+            <Route
+              path="/CheckoutSess"
+              element={
+                <CheckOutSucessful setshoppingCartItem={setshoppingCartItem} />
+              }
+            ></Route>
           </Routes>
         </main>
         <Footer />
@@ -209,5 +204,4 @@ function App() {
     </>
   );
 }
-
 export default App;

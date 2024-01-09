@@ -1,28 +1,26 @@
 import React, { useState } from "react";
-import Brandfilter from "./Brandfilter";
-import Typefilter from "./Typefilter";
+//import Typefilter from "./Typefilter";
 import Pricefilter from "./Pricefilter";
-import Slider from "./Slider";
-//import ProductCard from "../ProductCard";
 import Sort from "../Sortfunction/Sort";
 
-function Filter({ searchedResults }) {
+function Filter({
+  searchedResults,
+  BrandfilterComponent,
+  TypefilterComponent,
+}) {
   const [selectedBrand, setSelectedBrand] = useState(null);
-
   const [selectedType, setSelectedType] = useState(null);
   const [selectedMinPrice, setSelectedMinPrice] = useState(0);
-  const [selectedMaxPrice, setSelectedMaxPrice] = useState(500);
+  const [selectedMaxPrice, setSelectedMaxPrice] = useState(700);
   const [open, setOpen] = useState(false);
 
   const handleBrandChange = (event) => {
     setSelectedBrand(event.target.value);
   };
-  console.log(selectedBrand);
 
   const handleTypeChange = (event) => {
     setSelectedType(event.target.value);
   };
-  console.log(selectedType);
 
   const handlePriceChange = (min, max) => {
     setSelectedMinPrice(min);
@@ -36,13 +34,6 @@ function Filter({ searchedResults }) {
     setSelectedMaxPrice(500);
   };
 
-  console.log(selectedMinPrice);
-  console.log(selectedMaxPrice);
-
-  const handleCardClick = (tcin) => {
-    console.log("Product card clicked. tcin:", tcin);
-  };
-
   const handleOnClick = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -50,46 +41,34 @@ function Filter({ searchedResults }) {
   const filteredResults = searchedResults.filter(
     (product) =>
       (!selectedBrand || product.name.includes(selectedBrand)) &&
-      (!selectedType || product.productTypes.includes(selectedType)) &&
+      (!selectedType || product.productTypes === selectedType) &&
       selectedMinPrice <= product.price &&
       product.price <= selectedMaxPrice
   );
 
   return (
-    <div>
+    <div className="filterAndSort">
       <div className="FilterContainer">
-        <button onClick={handleOnClick}>
-          <img src="./filter.png" alt="filter"></img>
+        <button className="filterbtn" onClick={handleOnClick}>
+          <img src="../filter.png" alt="filter" width="20px"></img>
           Filter
         </button>
 
         {open && (
           <div className="container">
-            <Brandfilter handleChange={handleBrandChange} />
-            <Typefilter handleChange={handleTypeChange} />
+            {BrandfilterComponent && (
+              <BrandfilterComponent handleChange={handleBrandChange} />
+            )}
+            {TypefilterComponent && (
+              <TypefilterComponent handleChange={handleTypeChange} />
+            )}
+
             <Pricefilter handleChange={handlePriceChange} />
-            <Slider handlePriceChange={handlePriceChange} />
             <button onClick={handleClearFilters}>Clear Filters</button>
           </div>
         )}
       </div>
       <Sort searchResultProducts={filteredResults} />
-      {/* {filteredResults.map((product, index) => (
-<<<<<<< HEAD
-      <Sort searchResultProducts={filteredResults} />
-      {/* {filteredResults.map((product, index) => (
-=======
->>>>>>> d4479d542ba1936b87c1a4e25c40b99efa92583f
-        <ProductCard
-          key={index}
-          image={product.image}
-          name={product.name}
-          price={product.price}
-          priceType={product.priceType}
-          tcin={product.tcin}
-          onClick={handleCardClick}
-        />
-      ))} */}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import "./index.css";
 
 export default function NavBar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);

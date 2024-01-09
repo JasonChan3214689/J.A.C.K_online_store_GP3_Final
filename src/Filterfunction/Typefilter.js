@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Input from "./Input";
+//import Input from "./Input";
+import Input2 from "./Input2";
 
 export default function Typefilter({ handleChange }) {
   const [open, setOpen] = useState(false);
@@ -16,23 +17,23 @@ export default function Typefilter({ handleChange }) {
       </button>
       {open && (
         <>
-          <Input
+          <Input2
             handleChange={handleChange}
-            value="Consoles"
+            value="Console"
             title="Consoles"
-            name="brand"
+            name="cat"
           />
-          <Input
+          <Input2
             handleChange={handleChange}
-            value="Games"
-            title="Games"
-            name="brand"
+            value="Video Games"
+            title="Video Games"
+            name="cat"
           />
-          <Input
+          <Input2
             handleChange={handleChange}
             value="Accessories"
             title="Accessories"
-            name="brand"
+            name="cat"
           />
         </>
       )}

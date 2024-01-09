@@ -33,6 +33,13 @@ div.Header > * {
   flex: 1 1 auto;
 }
 
+/*Logo*/
+.Logo img {
+  width: 250px;
+  margin-right: 2.5rem;
+  margin-top: 0.2rem;
+}
+
 /* search textbox */
 
 .search-container {
@@ -59,6 +66,15 @@ div.SearchBarCotainer span {
   border-radius: 150px;
   border-width: 0px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button.ClearSearchButton {
+  height: 15px;
+  border-radius: 30px;
+  border-width: 0px;
+  position: relative;
+  right: 50px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 button.SearchButton {
@@ -194,6 +210,33 @@ button.SearchButton {
   flex-wrap: wrap;
 }
 
+.viewAllConsole {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  bottom: 90px;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.viewAllGame {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  bottom: 90px;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.viewAllAcc {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  bottom: 90px;
+  text-decoration: underline;
+  color: #000000;
+}
+
 /* advertiseContainer */
 .advertiseContainer img {
   width: 100%;
@@ -312,7 +355,7 @@ div:has(> a[href="/AboutUs"]) {
   color: #ffffff;
 }
 
-a {
+li a {
   color: #ffffff;
   font-style: normal;
   text-decoration: none;
@@ -334,8 +377,17 @@ a {
 
   .searchInput,
   .search-container {
+    position: relative;
     width: 100%;
     margin: 0 1rem;
+  }
+
+  .clear-search img {
+    position: relative;
+
+    right: 50px;
+    transform: translateY(-50%);
+    z-index: 9999;
   }
 
   .ProductCard {
@@ -599,4 +651,17 @@ a {
   div:has(> a[href="/AboutUs"]) {
     margin-top: -0.7rem;
   }
+}
+
+.ProductList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 70px;
+}
+
+.search-result {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
 }

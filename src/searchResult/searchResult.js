@@ -1,6 +1,9 @@
 import React from "react";
 //import ProductCard from "../ProductCard";
 import Filter from "../Filterfunction/Filter";
+import Brandfilter from "../Filterfunction/Brandfilter";
+import Typefilter from "../Filterfunction/Typefilter";
+import "../index.css";
 
 function SearchResults({ keyword, totalResults }) {
   const results = totalResults.filter((product) =>
@@ -13,9 +16,13 @@ function SearchResults({ keyword, totalResults }) {
   // };
   return (
     <>
-      <span>Search result</span>
+      <div className="search-result">Search result</div>
       <div>
-        <Filter searchedResults={results} />
+        <Filter
+          searchedResults={results}
+          BrandfilterComponent={Brandfilter}
+          TypefilterComponent={Typefilter}
+        />
       </div>
       {/* <div className="ItemsContainer">
         {results.length > 0 ? (

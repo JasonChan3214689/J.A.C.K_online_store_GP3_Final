@@ -44,7 +44,7 @@ export default function ProductCard({
       <Link to={`/product/${tcin}`}>
         <div className="ProductImage ProductImageShadow">
           <img className="crown" src="./premium-quality 1.png" alt="15" />
-          <img src={image} alt="精選圖片"></img>
+          <img className="productimg" src={image} alt="精選圖片"></img>
         </div>
       </Link>
       <div className="ProductTitle">{name}</div>

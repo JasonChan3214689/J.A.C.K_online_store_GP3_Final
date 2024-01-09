@@ -12,6 +12,10 @@ export default function SearchBar({ onSearch }) {
     navigate(`/search-results/${input}`);
   };
 
+  const handleClear = () => {
+    setInput("");
+  };
+
   return (
     <>
       <div className="search-container">
@@ -22,6 +26,14 @@ export default function SearchBar({ onSearch }) {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
+        <button className="ClearSearchButton" onClick={handleClear}>
+          <img
+            className="clear-search"
+            style={{ width: "20px" }}
+            src="/remove.png"
+            alt="clear"
+          />
+        </button>
         <button className="SearchButton" onClick={handleSearch}>
           <img style={{ width: "35px" }} src="/放大鏡.png" alt="放大镜" />
         </button>
