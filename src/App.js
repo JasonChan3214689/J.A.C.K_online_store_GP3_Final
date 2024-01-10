@@ -8,6 +8,7 @@ import CreateAcc from "./Login/CreateAcc";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { useState } from "react";
+
 import Games from "./Pages/Games";
 import Accessories from "./Pages/Accessories";
 import Consoles from "./Pages/Consoles";
@@ -38,9 +39,30 @@ function App() {
   const [searchKeyword, setSearchKeyword] = useState("");
   const [shoppingCartItem, setshoppingCartItem] = useState([]);
   const [clientGrandTotal, setGrandTotal] = useState(0);
+  const [firstInput, setFirstInput] = useState(null);
+  const [LoginName, setLoginName] = useState("");
+  const [isLogin, setIsLogin] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const [billingDetails, setBillingDetails] = useState({
+    name: "",
+    address: "",
+    phone: "",
+    cardName: "",
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setBillingDetails({
+      ...billingDetails,
+      [name]: value,
+    });
+  };
+
   // Fetch 全部資料
+
   const resultArray = require("./Array/resultArray");
   console.log(resultArray);
+
   useEffect(() => {
     setTotalResults(resultArray.default);
   }, []);
@@ -84,6 +106,7 @@ function App() {
       console.log("No saved items found in local storage");
     }
   }, []);
+
   useEffect(() => {
     console.log("Setting items to local storage", shoppingCartItem);
     localStorage.setItem("shoppingCartItems", JSON.stringify(shoppingCartItem));
@@ -92,6 +115,28 @@ function App() {
     console.log("Updating shopping cart items: ", value);
     setshoppingCartItem((item) => [...item, value]);
   }
+
+  useEffect(() => {
+    console.log("Loading items from local storage on mount");
+    const savedFirstInput = localStorage.getItem("firstInput");
+    if (savedFirstInput) {
+      console.log("Found saved first input:", savedFirstInput);
+      setLoginName(JSON.parse(savedFirstInput));
+      setFirstInput(JSON.parse(savedFirstInput));
+      setIsLogin(true);
+    } else {
+      console.log("No saved items found in local storage");
+    }
+
+    setIsMounted(true);
+  }, []);
+  useEffect(() => {
+    if (isMounted) {
+      console.log("Setting items to local storage", firstInput);
+      localStorage.setItem("firstInput", JSON.stringify(firstInput));
+    }
+  }, [firstInput, isMounted]);
+
   return (
     <>
       <Router>
@@ -99,6 +144,9 @@ function App() {
           onSearch={setSearchKeyword}
           totalResults={totalResults}
           shoppingCartItem={shoppingCartItem}
+          firstInput={firstInput}
+          LoginName={LoginName}
+          isLogin={isLogin}
         />
         <main>
           <Routes>
@@ -153,7 +201,16 @@ function App() {
               element={<Advertisement saleresult={totalResults} />}
             ></Route>
             <Route path={`/product/:tcin`} element={<ProductDetails />}></Route>
-            <Route path="/login/signin" element={<SignIn />}></Route>
+            <Route
+              path="/login/signin"
+              element={
+                <SignIn
+                  firstInput={firstInput}
+                  setFirstInput={setFirstInput}
+                  setIsLogin={setIsLogin}
+                />
+              }
+            ></Route>
             <Route path="/login/create-account" element={<CreateAcc />}></Route>
             <Route
               path={`/shopping-cart`}
@@ -172,13 +229,18 @@ function App() {
                 <CheckoutPage
                   clientGrandTotal={clientGrandTotal}
                   setshoppingCartItem={setshoppingCartItem}
+                  setBillingDetails={handleInputChange}
+                  billingDetails={billingDetails}
                 />
               }
             ></Route>
             <Route
               path="/CheckoutSess"
               element={
-                <CheckOutSucessful setshoppingCartItem={setshoppingCartItem} />
+                <CheckOutSucessful
+                  setshoppingCartItem={setshoppingCartItem}
+                  billingDetails={billingDetails}
+                />
               }
             ></Route>
             <Route path="/AboutUs" element={<AboutUs />}></Route>
@@ -194,7 +256,10 @@ function App() {
             <Route
               path="/CheckoutSess"
               element={
-                <CheckOutSucessful setshoppingCartItem={setshoppingCartItem} />
+                <CheckOutSucessful
+                  setshoppingCartItem={setshoppingCartItem}
+                  billingDetails={billingDetails}
+                />
               }
             ></Route>
           </Routes>

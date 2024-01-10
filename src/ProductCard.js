@@ -40,7 +40,7 @@ export default function ProductCard({
       variants={cardVariants}
       initial="hidden"
       animate={controls}
-      transition={{ duration: 0.75, delay: 0.5 }}
+      transition={{ duration: 0.75, delay: 0.3 }}
       whileHover={{ scale: 1.05 }}
     >
       <Link to={`/product/${tcin}`}>
@@ -54,7 +54,7 @@ export default function ProductCard({
         <div className="originalPrice">
           <s>{originalPrice}</s>
         </div>
-        <span>{price}</span>
+        <span>${price}</span>
         <span>{rating}</span>
       </div>
     </motion.div>

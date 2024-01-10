@@ -1,10 +1,100 @@
 .CreateAccInput {
-	margin: 50px 0px 50px 0px;
+  margin: 30px 0px 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 35px;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+#boldH2 {
+  font-weight: bolder;
+}
+
+.stopLoadingButton {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.display-text {
+  margin-left: 10px;
+  color: red;
+}
+
+.createInput {
+  width: 450px;
+  height: 25px;
+  border-radius: 15px;
+  padding: 15px;
+  border-color: #cf0000;
+  font-size: 20px;
+}
+
+.wrongMessage {
+  color: #cf0000;
+}
+
+.activateButton {
+  background-color: #cf0000;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  border-color: #cf0000;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.activateButton:hover {
+  background-color: #cf0000;
+}
+
+.activateButton span {
+  margin-right: 5px;
+}
+
+.activateButton:hover,
+.activateButton:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 500px) {
+  .CreateAccInput {
+    margin: 0px 30px 30px 30px;
+  }
+  h1 {
+    font-size: 26px;
+    margin-top: 5px;
+  }
+  .createInput {
+    width: 350px;
+    height: 15px;
+    margin: -10px 0px -5px 0px;
+  }
+  .activateButton {
+    margin-bottom: 25px;
+  }
+}
+
+/* 
+.CreateAccInput {
+	margin: 30px 0px 30px 0px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	gap: 30px;
+	gap: 15px;
+}
+
+h1 {
+	font-size: 30px;
 }
 
 .SignInBtn {
@@ -14,3 +104,17 @@
 .ConfirmCreateBtn {
 	cursor: pointer;
 }
+
+.Input {
+	width: 450px;
+	height: 25px;
+	border-radius: 10px;
+	padding: 15px;
+	border: none;
+	font-size: 20px;
+}
+
+.Input::placeholder {
+	font-size: 20px;
+} 
+*/

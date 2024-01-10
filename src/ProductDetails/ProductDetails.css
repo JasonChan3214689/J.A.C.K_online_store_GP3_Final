@@ -63,6 +63,7 @@
   width: 500px;
   height: auto;
 }
+
 /*
 .custom-thumbnail {
   width: 100%;
@@ -285,8 +286,18 @@
   }
 }
 /* Wave text loader made by: csozi | Website: english.csozi.hu*/
+.descS2 > div img {
+  box-shadow: none;
+}
+
+.png1 {
+  max-width: 50%;
+}
 
 .loadingspinner {
+  .descS2 > div img {
+    box-shadow: none;
+  }
   --square: 40px;
   --offset: 50px;
   --duration: 2.4s;
@@ -543,4 +554,8 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+
+.billInformationWrapper {
+  width: 100%;
 }

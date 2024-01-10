@@ -40,7 +40,7 @@ export default function ProductCard3({
       variants={cardVariants}
       initial="hidden"
       animate={controls}
-      transition={{ duration: 0.75, delay: 0.5 }}
+      transition={{ duration: 0.75, delay: 0.3 }}
       whileHover={{ scale: 1.05 }}
     >
       <Link to={`/product/${tcin}`}>

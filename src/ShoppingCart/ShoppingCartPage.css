@@ -191,67 +191,46 @@ hr {
 
 @media screen and (max-width: 767px) {
   .card {
-    /* 减少卡片的内边距 */
     padding: 0.5rem;
   }
 
   .title {
-    /* 减小标题的高度和字体大小 */
     height: 30px;
     font-size: 10px;
     padding-left: 10px;
   }
 
   .input_field {
-    /* 增加输入框的高度，方便触控 */
     height: 40px;
   }
 
   .promo form button {
-    /* 增大按钮的高度和字体大小，更适合触控 */
     height: 44px;
     font-size: 14px;
     padding: 12px;
   }
 
   .payments .details {
-    /* 调整支付详情的布局为单列 */
     grid-template-columns: 1fr;
-    font-size: 12px; /* 可能需要增加字体大小 */
+    font-size: 12px;
   }
 
   .checkout .footer {
-    /* 调整底部栏的内边距和按钮大小 */
     padding: 8px;
   }
 
   .checkout .checkout-btn {
-    /* 增大结账按钮的尺寸 */
-    width: auto; /* 宽度自适应 */
+    width: auto;
     height: 44px;
     font-size: 14px;
   }
 
   .ProductWrapper div {
-    /* 减少商品包装的内边距 */
     padding: 0.25rem;
   }
-
-  /* 可能还需要调整其他元素尺寸和布局... */
 }
 
-/* 平板尺寸 */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .card,
-  .title,
-  .input_field,
-  .promo form button,
-  .payments .details,
-  .checkout .footer,
-  .checkout .checkout-btn,
-  .ProductWrapper div {
-  }
-
   .card {
     width: auto;
     padding: 1rem;
@@ -260,4 +239,8 @@ hr {
   .promo form {
     grid-template-columns: 1fr auto;
   }
+}
+
+.billInformationWrapper {
+  width: 100%;
 }

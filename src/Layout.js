@@ -6,7 +6,16 @@ import { Link } from "react-router-dom";
 
 import ShoppingCart from "./ShoppingCart";
 
-const Layout = ({ totalResults, onSearch, shoppingCartItem }) => {
+import LoginSuccessSidebar from "./LoginSuccessSidebar";
+
+const Layout = ({
+  totalResults,
+  onSearch,
+  shoppingCartItem,
+  isLogin,
+  firstInput,
+  LoginName,
+}) => {
   return (
     <div className="layout">
       <div className="NavBar">
@@ -22,7 +31,11 @@ const Layout = ({ totalResults, onSearch, shoppingCartItem }) => {
           <SearchBar totalResults={totalResults} onSearch={onSearch} />
         </div>
 
-        <LoginSidebarToggle />
+        {isLogin && LoginName ? (
+          <LoginSuccessSidebar firstInput={firstInput} LoginName={LoginName} />
+        ) : (
+          <LoginSidebarToggle />
+        )}
         <ShoppingCart shoppingCartItem={shoppingCartItem} />
       </div>
     </div>

@@ -11,16 +11,6 @@ function Advertisement({ saleresult }) {
     (product) => product.priceType === "sale"
   );
 
-  const handleCardClick = (tcin) => {
-    console.log("Product card clicked. tcin:", tcin);
-  };
-
-  const calculateDiscount = (originalPrice, price) => {
-    const discountPercentage =
-      100 - ((originalPrice - price) / originalPrice) * 100;
-    return Math.round(discountPercentage) + "% off";
-  };
-
   return (
     <>
       <p>New Year Sale</p>

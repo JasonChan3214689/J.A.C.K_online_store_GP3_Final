@@ -1,0 +1,19 @@
+.gameIntroductionWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.gameIntroductionWrapper img {
+  margin: 0.4rem;
+  width: 32%;
+
+  display: block;
+}
+
+@media screen and (max-width: 500px) {
+  .gameIntroductionWrapper img {
+    width: 100%;
+  }
+}

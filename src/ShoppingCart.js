@@ -46,7 +46,7 @@ export default function ShoppingCart({ shoppingCartItem }) {
     <div className="CartContainer" onClick={handleOpenShoppingCart}>
       <img src={iconSrc} alt="購物車" />
       {shoppingCartItem.length !== 0 && !isMobile && (
-        <span>{shoppingCartItem.length} product in shopping cart</span>
+        <span>{shoppingCartItem.length} product</span>
       )}
     </div>
   );

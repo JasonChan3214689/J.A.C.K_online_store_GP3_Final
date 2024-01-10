@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { useNavigate } from "react-router-dom";
 
-function LoginSidebarToggle() {
+function LoginSuccessSidebar({ firstInput, LoginName }) {
   const [toggled, setToggled] = React.useState(false);
   const navigate = useNavigate();
 
@@ -34,12 +34,13 @@ function LoginSidebarToggle() {
         <Menu>
           <MenuItem onClick={handleOnClickSignIn}>Login</MenuItem>
           <MenuItem onClick={handleOnClickCreateAcc}>Create Account</MenuItem>
+          <MenuItem onClick={handleOnClickShoppingCart}>Shopping Cart</MenuItem>
         </Menu>
       </Sidebar>
       <main style={{ display: "flex", padding: 10 }}>
         <div className="LoginContainer" onClick={() => setToggled(!toggled)}>
-          <span>Login</span>
-          <img src="/Login.png" alt="Login" />
+          <span>Hi, {firstInput}</span>
+          <img src="/panda.png" alt="panda" />
 
           {/* <button
 						className="LoginContainer"
@@ -62,4 +63,4 @@ function LoginSidebarToggle() {
 //   );
 // }
 
-export default LoginSidebarToggle;
+export default LoginSuccessSidebar;

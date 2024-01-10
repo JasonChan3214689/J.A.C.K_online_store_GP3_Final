@@ -55,7 +55,7 @@ function Filter({
         </button>
 
         {open && (
-          <div className="container">
+          <div className="filterContainer">
             {BrandfilterComponent && (
               <BrandfilterComponent handleChange={handleBrandChange} />
             )}
@@ -64,7 +64,9 @@ function Filter({
             )}
 
             <Pricefilter handleChange={handlePriceChange} />
-            <button onClick={handleClearFilters}>Clear Filters</button>
+            <button className="clearfilterbtn" onClick={handleClearFilters}>
+              Clear Filters
+            </button>
           </div>
         )}
       </div>

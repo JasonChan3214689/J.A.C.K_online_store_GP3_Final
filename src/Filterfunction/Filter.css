@@ -108,3 +108,34 @@
   color: #ffffff;
   font-size: 1em;
 }
+
+.filterContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.clearfilterbtn {
+  width: 130px;
+  height: 40px;
+  border: 3px solid #ff00003d;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: rgb(251, 208, 208);
+  font-size: 1em;
+  font-weight: 300;
+  color: #000000;
+}
+
+@media screen and (max-width: 500px) {
+  .ProductList {
+    position: relative;
+    right: 106px;
+  }
+}

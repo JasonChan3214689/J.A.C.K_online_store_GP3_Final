@@ -67,7 +67,21 @@ const ProductDetailsDesc = ({ detailsDesc }) => {
             <Interweave content={descSecondPara} />
           </div>
           <div>
-            <img src="/NintendoFamily_v5.jpg" alt="descS2Photo" />
+            <motion.img
+              src="/mario.png"
+              alt="descS2Photo"
+              className="png1"
+              initial={{ x: 20, opacity: 1, y: 20 }}
+              animate={{
+                x: [20, 40, 60, 80, 100],
+                opacity: 1,
+                y: [40, 20, 40, 20, 40],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+              }}
+            />
           </div>
         </motion.div>
       )}

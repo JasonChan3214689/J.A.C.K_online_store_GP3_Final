@@ -16,7 +16,9 @@ function SearchResults({ keyword, totalResults }) {
   // };
   return (
     <>
-      <div className="search-result">Search result</div>
+      <div className="search-result">
+        Search result:"{keyword}" Total: {results.length} results
+      </div>
       <div>
         <Filter
           searchedResults={results}

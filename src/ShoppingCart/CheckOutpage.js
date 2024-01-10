@@ -41,24 +41,15 @@ const CARD_ELEMENT_EDate_OPTIONS = {
 
 console.log(stripePromise);
 
-const CheckoutForm = ({ clientGrandTotal, setshoppingCartItem }) => {
+const CheckoutForm = ({
+  clientGrandTotal,
+  setshoppingCartItem,
+  setBillingDetails,
+  billingDetails,
+}) => {
   const navigate = useNavigate();
   const stripe = useStripe();
   const elements = useElements();
-  const [billingDetails, setBillingDetails] = useState({
-    name: "",
-    address: "",
-    phone: "",
-    cardName: "",
-  });
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setBillingDetails({
-      ...billingDetails,
-      [name]: value,
-    });
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -127,7 +118,7 @@ const CheckoutForm = ({ clientGrandTotal, setshoppingCartItem }) => {
                 id="name"
                 name="name"
                 type="text"
-                onChange={handleInputChange}
+                onChange={setBillingDetails}
                 required
                 placeholder="Enter your full name"
                 className="input_field"
@@ -142,7 +133,7 @@ const CheckoutForm = ({ clientGrandTotal, setshoppingCartItem }) => {
                   id="address"
                   name="address"
                   type="text"
-                  onChange={handleInputChange}
+                  onChange={setBillingDetails}
                   required
                   className="input_field"
                   placeholder="Enter your address"
@@ -158,7 +149,7 @@ const CheckoutForm = ({ clientGrandTotal, setshoppingCartItem }) => {
                   id="phone"
                   name="phone"
                   type="tel"
-                  onChange={handleInputChange}
+                  onChange={setBillingDetails}
                   required
                   className="input_field"
                   placeholder="Enter your phone Number"
@@ -179,7 +170,7 @@ const CheckoutForm = ({ clientGrandTotal, setshoppingCartItem }) => {
                   id="cardName"
                   name="cardName"
                   type="text"
-                  onChange={handleInputChange}
+                  onChange={setBillingDetails}
                   required
                   className="input_field"
                   placeholder="Name on credit Card"
@@ -214,10 +205,18 @@ const CheckoutForm = ({ clientGrandTotal, setshoppingCartItem }) => {
   );
 };
 
-const CheckoutPage = ({ clientGrandTotal }) => {
+const CheckoutPage = ({
+  clientGrandTotal,
+  setBillingDetails,
+  billingDetails,
+}) => {
   return (
     <Elements stripe={stripePromise}>
-      <CheckoutForm clientGrandTotal={clientGrandTotal} />
+      <CheckoutForm
+        clientGrandTotal={clientGrandTotal}
+        setBillingDetails={setBillingDetails}
+        billingDetails={billingDetails}
+      />
     </Elements>
   );
 };
