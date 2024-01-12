@@ -5,7 +5,7 @@ import SearchResults from "./searchResult/searchResult";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import SignIn from "./Login/SignIn";
 import CreateAcc from "./Login/CreateAcc";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { useState } from "react";
 
