@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/J.A.C.K_online_store_GP3_Final/static/css/main.bf5bd565.css",
-    "main.js": "/J.A.C.K_online_store_GP3_Final/static/js/main.ab0ab9a6.js",
+    "main.js": "/J.A.C.K_online_store_GP3_Final/static/js/main.8e598185.js",
     "static/media/fa-solid-900.ttf": "/J.A.C.K_online_store_GP3_Final/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
     "static/media/fa-brands-400.ttf": "/J.A.C.K_online_store_GP3_Final/static/media/fa-brands-400.6205fd00fb1b573e9f0f.ttf",
     "static/media/fa-solid-900.woff2": "/J.A.C.K_online_store_GP3_Final/static/media/fa-solid-900.fb8184add5a3101ad0a3.woff2",
@@ -15,10 +15,10 @@
     "static/media/fa-v4compatibility.woff2": "/J.A.C.K_online_store_GP3_Final/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
     "index.html": "/J.A.C.K_online_store_GP3_Final/index.html",
     "main.bf5bd565.css.map": "/J.A.C.K_online_store_GP3_Final/static/css/main.bf5bd565.css.map",
-    "main.ab0ab9a6.js.map": "/J.A.C.K_online_store_GP3_Final/static/js/main.ab0ab9a6.js.map"
+    "main.8e598185.js.map": "/J.A.C.K_online_store_GP3_Final/static/js/main.8e598185.js.map"
   },
   "entrypoints": [
     "static/css/main.bf5bd565.css",
-    "static/js/main.ab0ab9a6.js"
+    "static/js/main.8e598185.js"
   ]
 }
